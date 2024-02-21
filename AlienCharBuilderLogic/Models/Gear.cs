@@ -1,4 +1,6 @@
-﻿namespace AlienCharBuilderLogic.Models
+﻿using AlienCharBuilderLogic.PropertyAttributes;
+
+namespace AlienCharBuilderLogic.Models
 {
     public class Gear
     {

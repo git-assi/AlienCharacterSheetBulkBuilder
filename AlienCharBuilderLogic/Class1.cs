@@ -7,6 +7,11 @@ namespace AlienCharBuilderLogic
     {
         public void narf()
         {
+            
+        }
+
+        public void narf2()
+        {
             string baseString = @"new Attribute()
                                     {
 	                                    Sheetname = ""[SN]"",
