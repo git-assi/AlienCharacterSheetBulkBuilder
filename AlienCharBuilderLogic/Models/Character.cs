@@ -4,11 +4,10 @@ namespace AlienCharBuilderLogic.Models
 {
     
 
-    internal class Charactersheet
+    internal class Character
     {
         public int PlatoonNr { get; set; }
-        private Dictionary<string, int> _items { get; set; } = new Dictionary<string, int>();
-
+     
         [SheetnameAttribute(Sheetname = Constants.AGENDA)]
         public string Agenda { get; set; } = string.Empty;
         
@@ -27,22 +26,29 @@ namespace AlienCharBuilderLogic.Models
         [SheetnameAttribute(Sheetname = Constants.APPEARANCE)]
         public string Appearance { get; set; } = string.Empty;
 
+        [ComplexDataAttribute]
         public Conditions Conditions { get; set; } = new Conditions { };
 
-        public Talent myTalent { get; set; } = new Talent { };
+        public Talent Talent { get; set; } = new Talent { };
 
-        public TinyItems Tiny_items { get; set; } = new TinyItems { };
+        [ComplexDataAttribute()]
+        public TinyItems TinyItems { get; set; } = new TinyItems { };
         
-        public string Signature_item { get; set; } = string.Empty;
-        
+        public string SignatureItem { get; set; } = string.Empty;
+
+        [CountableAttribute(Min = 0, Max = 10)]
+
         public List<Gear> Gear { get; set; } = new List<Gear> { };
 
         public Consumables Consumables { get; set; } = new Consumables();
-       
+
+        
+        [ComplexDataAttribute()]
         public Armor Armor { get; set; } = new Armor();
 
+        [CountableAttribute(Min = 0, Max = 4)]
+        [ComplexDataAttribute()]
+        
         public List<Weapon> Weapons { get; set; } = new List<Weapon> { };
-
-
     }
 }

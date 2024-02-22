@@ -11,8 +11,10 @@ namespace AlienCharBuilderLogic.Models
             {
                 string result = "";
                 foreach(var item in _items.Keys)
-                {                    
-                    result += item + " " + _items[item].ToString() + Environment.NewLine;
+                {
+                    int anzahl = _items[item];
+                    
+                    result += item +( anzahl > 1 ?" x " + anzahl.ToString() : "") + Environment.NewLine;
                 }
 
                 return result;

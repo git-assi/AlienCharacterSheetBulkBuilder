@@ -1,4 +1,6 @@
-﻿namespace AlienCharBuilderLogic.Models
+﻿using AlienCharBuilderLogic.PropertyAttributes;
+
+namespace AlienCharBuilderLogic.Models
 {
     public class Attribute
     {
@@ -7,100 +9,59 @@
         public int Value { get; set; }
     }
 
-    public class AttributeInit
+    public class Fubar
     {
-        public static List<Attribute> GetAttributes()
-        {
-            var result = new List<Attribute>()
-            {
-                new Attribute()
-                                    {
-                                        Sheetname = "Str",
-                                        Name = "Strength",
-                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Ag",
-                                                        Name = "Agility",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Wits",
-                                                        Name = "Wits",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Emp",
-                                                        Name = "Empathy",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "HM",
-                                                        Name = "HeavyMachinery",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "CC",
-                                                        Name = "CloseCombat",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "St",
-                                                        Name = "Stamina",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "O",
-                                                        Name = "Observation",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Su",
-                                                        Name = "Survival",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Com",
-                                                        Name = "Comtech",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "MA",
-                                                        Name = "MedicalAid",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Man",
-                                                        Name = "Manipulation",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Cmd",
-                                                        Name = "Command",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "P",
-                                                        Name = "Piloting",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Mo",
-                                                        Name = "Mobilty",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "RC",
-                                                        Name = "RangedCombat",
-                                                    },
-                new Attribute()
-                                                    {
-                                                        Sheetname = "Enc",
-                                                        Name = "Encumbrance",
-                                                    },
-            };
+        [SheetnameAttribute(Sheetname = Constants.STRENGTH)]
+        public int Strength { get; set; }
 
-            return result;
-        }
+        [SheetnameAttribute(Sheetname = Constants.AGILITY)]
+        public int Agility { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.WITS)]
+        public int Wits { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.EMPATHY)]
+        public int Empathy { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.HEAVY_MACHINERY)]
+        public int HeavyMachinery { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.CLOSE_COMBAT)]
+        public int CloseCombat { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.STAMINA)]
+        public int Stamina { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.OBSERVATION)]
+        public int Observation { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.SURVIVAL)]
+        public int Survival { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.COMTECH)]
+        public int Comtech { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.MEDICALAID)]
+        public int MedicalAid { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.MANIPULATION)]
+        public int Manipulation { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.COMMAND)]
+        public int Command { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.PILOTING)]
+        public int Piloting { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.MOBILTY)]
+        public int Mobilty { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.RANGED_COMBAT)]
+        public int RangedCombat { get; set; }
+
+        [SheetnameAttribute(Sheetname = Constants.ENCUMBRANCE)]
+        public int Encumbrance { get; set; }
     }
+
+    
 }

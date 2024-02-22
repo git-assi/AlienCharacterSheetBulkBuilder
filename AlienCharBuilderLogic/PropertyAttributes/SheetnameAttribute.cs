@@ -12,4 +12,14 @@
         public int Min { get; set; }
         public int Max { get; set; }
     }
+
+    [AttributeUsage(AttributeTargets.Property)]
+    public class ComplexDataAttribute : Attribute { }
+
+    [AttributeUsage(AttributeTargets.Property)]
+    public class CountableAttribute : Attribute
+    {
+        public int Min { get; set; }
+        public int Max { get; set; }
+    }
 }

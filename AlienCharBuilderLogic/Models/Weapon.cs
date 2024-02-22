@@ -2,7 +2,7 @@
 
 namespace AlienCharBuilderLogic.Models
 {
-   
+
     public class Weapon
     {
         [SheetnameAttribute(Sheetname = "Weapon[n]")]
