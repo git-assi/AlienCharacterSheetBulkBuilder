@@ -25,7 +25,7 @@ namespace TestUI
         {
             try
             {
-                (new Class1()).narf() ;
+                Class1.Narf();
             }
             catch (Exception ex) 
             {

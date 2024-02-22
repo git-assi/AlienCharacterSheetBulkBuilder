@@ -1,7 +1,7 @@
 ﻿using AlienCharBuilderLogic.PropertyAttributes;
 namespace AlienCharBuilderLogic.Models
 {
-    internal class Conditions
+    public class Conditions
     {
         [SheetnameAttribute(Sheetname = Constants.STARVING)]
         public bool Starving { get; set; }

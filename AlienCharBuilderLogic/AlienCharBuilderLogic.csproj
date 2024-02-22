@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BouncyCastle" Version="1.8.9" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>

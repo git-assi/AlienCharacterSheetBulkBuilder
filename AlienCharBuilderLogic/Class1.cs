@@ -1,4 +1,6 @@
-﻿using AlienCharBuilderLogic.Models;
+﻿using AlienCharBuilderLogic.Factory;
+using AlienCharBuilderLogic.InGameResources.Models;
+using AlienCharBuilderLogic.Models;
 using iTextSharp.text.pdf;
 using System.Data;
 
@@ -6,43 +8,69 @@ namespace AlienCharBuilderLogic
 {
     public class Class1
     {
-        public void narf()
+        public static void Narf()
         {
-            var x = new Models.Character();
-            x.Name = "Rogers";
-            x.Armor = new Models.Armor();
-            x.Armor.Name = "Flakvest";
-            x.Armor.Rating = 5000;
 
-            x.Weapons.Add(WeaonFactory.CreateAssaultRifle());
+            var fac = new CharacterFactory();
+            fac.platoon = "first";
 
-            x.TinyItems.AddItem("Foto");
-            x.TinyItems.AddItem("Zigarette");
-            x.TinyItems.AddItem("Zigarette");
-            x.TinyItems.AddItem("Zigarette");
-            x.TinyItems.AddItem("Zigarette");
+            var plt = new InGameResources.Models.Platoon()
+            {
+                Lieutenant = new NPC(),
+                SecondInCommand = new NPC(),
 
-            x.Attributes.Wits.Value = 2;
-            x.Attributes.Wits.Survival = 1;
+                SectionA = new Section()
+                {
+                    APC = new GroundVehicle(),
+                    VehicleDriver = fac.CreateCharacter("Driver"),
 
-            x.Attributes.Agility.Value = 2;
-            x.Attributes.Agility.Piloting = 1;
+                    Dropship = new AirVehicle() { Name = "Blackfly" },
+                    Wing = new FlightCrew() { Pilot = fac.CreateCharacter("Pilot"), WeaponOfficer = fac.CreateCharacter("WeaponsOfficer"), },
 
-            x.Attributes.Strength.Value = 2;
-            x.Attributes.Strength.HeavyMachinery = 1;
+                    FirstSquad = new Squad() 
+                    { 
+                        FirstTeam = new Team() {Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Heavy Gunner") }
+                    },
 
-            x.Attributes.Empathy.Value = 2;
-            x.Attributes.Empathy.Manipulation = 1;
+                    SecondSquad = new Squad()
+                    {
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Medic") }
+                    }
+                },
 
-            var y = new Factory.CharacterSheet();
-            var data = new Dictionary<string, string>();
-            y.ReadCharacter(x, data);
+                SectionB = new Section()
+                {
+                    APC = new GroundVehicle(),
+                    VehicleDriver = fac.CreateCharacter("Driver"),
+
+                    Dropship = new AirVehicle() { Name = "Blackfly" },
+                    Wing = new FlightCrew() { Pilot = fac.CreateCharacter("Pilot"), WeaponOfficer = fac.CreateCharacter("WeaponsOfficer"), },
+
+                    FirstSquad = new Squad()
+                    {
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Heavy Gunner") }
+                    },
+
+                    SecondSquad = new Squad()
+                    {
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Tech") }
+                    }
+                },
+            };
 
 
+
+            /*var data = new Dictionary<string, string>();
+            fac.ReadObjectProperties(newChar, data);
+            */
             int xx = 1;
         }
 
     }
 
-      
+
 }

@@ -1,12 +1,19 @@
-﻿using AlienCharBuilderLogic.PropertyAttributes;
+﻿using AlienCharBuilderLogic.InGameResources;
+using AlienCharBuilderLogic.PropertyAttributes;
 
 namespace AlienCharBuilderLogic.Models
 {
 
+    //https://chartopia.d12dev.com/chart/33313/
+    public class Character
+    {        
+        public override string ToString()
+        {
+            string result = "";
+            result = $"{Career} {Name} {Appearance}";
+            return result;
+        }
 
-    internal class Character
-    {
-        public int PlatoonNr { get; set; }
 
         [SheetnameAttribute(Sheetname = Constants.AGENDA)]
         public string Agenda { get; set; } = string.Empty;
@@ -29,15 +36,15 @@ namespace AlienCharBuilderLogic.Models
         [ComplexDataAttribute]
         public Conditions Conditions { get; set; } = new Conditions { };
 
+        [ComplexDataAttribute]
         public Talent Talent { get; set; } = new Talent { };
 
         [ComplexDataAttribute]
         public TinyItems TinyItems { get; set; } = new TinyItems { };
 
         public string SignatureItem { get; set; } = string.Empty;
-
-        [CountableAttribute(Min = 0, Max = 10)]
-
+        
+        [ComplexDataAttribute()]
         public List<Gear> Gear { get; set; } = new List<Gear> { };
 
         public Consumables Consumables { get; set; } = new Consumables();
