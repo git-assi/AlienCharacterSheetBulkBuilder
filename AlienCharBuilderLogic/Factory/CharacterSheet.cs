@@ -38,6 +38,12 @@ namespace AlienCharBuilderLogic.Factory
                             var tmp = (MinMaxAttribute)attr;
                             minMax = (tmp.Min, tmp.Max);
                         }
+
+                        if (attr is CountableAttribute)
+                        {
+                            var tmp = (CountableAttribute)attr;
+                            minMax = (tmp.Min, tmp.Max);
+                        }
                     }
 
                     if (string.IsNullOrEmpty(sheetName)) continue;

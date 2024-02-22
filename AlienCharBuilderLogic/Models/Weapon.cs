@@ -2,6 +2,20 @@
 
 namespace AlienCharBuilderLogic.Models
 {
+    public class WeaonFactory
+    { 
+        public static Weapon CreateAssaultRifle()
+        {
+            return new Weapon()
+            {
+                Name = "Assault Rifle",
+                Bonus = 1,
+                Damage = 1,
+                Range = 50,
+            };
+        }
+    }
+
 
     public class Weapon
     {

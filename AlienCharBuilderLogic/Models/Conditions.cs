@@ -31,6 +31,9 @@ namespace AlienCharBuilderLogic.Models
         [MinMaxAttribute(Max = 10, Min = 0)]
         public int Radiation { get; set; }
 
+        [SheetnameAttribute(Sheetname = Constants.ENCUMBRANCE)]
+        public int Encumbrance { get; set; }
+
     }
 }
 

@@ -2,27 +2,27 @@
 
 namespace AlienCharBuilderLogic.Models
 {
-    
+
 
     internal class Character
     {
         public int PlatoonNr { get; set; }
-     
+
         [SheetnameAttribute(Sheetname = Constants.AGENDA)]
         public string Agenda { get; set; } = string.Empty;
-        
+
         [SheetnameAttribute(Sheetname = Constants.NAME)]
         public string Name { get; set; } = string.Empty;
-        
+
         [SheetnameAttribute(Sheetname = Constants.CAREER)]
         public string Career { get; set; } = string.Empty;
-        
+
         [SheetnameAttribute(Sheetname = Constants.BUDDY)]
         public string Buddy { get; set; } = string.Empty;
-        
+
         [SheetnameAttribute(Sheetname = Constants.RIVAL)]
         public string Rival { get; set; } = string.Empty;
-        
+
         [SheetnameAttribute(Sheetname = Constants.APPEARANCE)]
         public string Appearance { get; set; } = string.Empty;
 
@@ -31,9 +31,9 @@ namespace AlienCharBuilderLogic.Models
 
         public Talent Talent { get; set; } = new Talent { };
 
-        [ComplexDataAttribute()]
+        [ComplexDataAttribute]
         public TinyItems TinyItems { get; set; } = new TinyItems { };
-        
+
         public string SignatureItem { get; set; } = string.Empty;
 
         [CountableAttribute(Min = 0, Max = 10)]
@@ -42,13 +42,15 @@ namespace AlienCharBuilderLogic.Models
 
         public Consumables Consumables { get; set; } = new Consumables();
 
-        
+        [ComplexDataAttribute()]
+        public Attribute Attributes { get; set; } = new Attribute();
+
+
         [ComplexDataAttribute()]
         public Armor Armor { get; set; } = new Armor();
 
         [CountableAttribute(Min = 0, Max = 4)]
         [ComplexDataAttribute()]
-        
         public List<Weapon> Weapons { get; set; } = new List<Weapon> { };
     }
 }
