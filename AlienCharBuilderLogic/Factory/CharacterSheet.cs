@@ -10,13 +10,13 @@ namespace AlienCharBuilderLogic.Factory
     {
         private static readonly Random RandomGen = new();
 
-        public string platoon { get; set; } = string.Empty;
+        public string Platoon { get; set; } = string.Empty;
 
         public Character CreateCharacter(string career)
         {
             var newCharacter = new Character();
             (string name, string geschlecht) = GetNameUndGeschlecht();
-            newCharacter.Appearance = geschlecht + " " + platoon + " Platoon";
+            newCharacter.Appearance = geschlecht + " " + Platoon + " Platoon";
             newCharacter.Name = name;
             newCharacter.Career = career;
 
@@ -120,9 +120,9 @@ namespace AlienCharBuilderLogic.Factory
             return (name, geschlecht);
         }
 
-        public void ReadObjectProperties(object character, Dictionary<string, string> result)
+        public void ReadObjectProperties(object dataObject, Dictionary<string, string> result)
         {
-            foreach (var prop in character.GetType().GetProperties())
+            foreach (var prop in dataObject.GetType().GetProperties())
             {
                 string sheetName = string.Empty;
                 (int, int) minMax = (int.MinValue, int.MaxValue);
@@ -131,23 +131,33 @@ namespace AlienCharBuilderLogic.Factory
                 {
                     if (attr is ComplexDataAttribute)
                     {
-                        ReadObjectProperties(prop.GetValue(character), result);
+                        ReadObjectProperties(prop.GetValue(dataObject), result);
                     }
                     if (attr is SheetnameAttribute)
                     {
                         sheetName = ((SheetnameAttribute)attr).Sheetname;
                     }
-
                     if (attr is MinMaxAttribute)
-                    {
+                    { 
                         var tmp = (MinMaxAttribute)attr;
                         minMax = (tmp.Min, tmp.Max);
                     }
-
                     if (attr is CountableAttribute)
                     {
+                    
+                        var liste = prop.GetValue(dataObject);
+
+                       
+
+
                         var tmp = (CountableAttribute)attr;
-                        /*var liste = prop.GetValue(character) as List<object>;
+                        minMax = (tmp.Min, tmp.Max);
+                        for (int i = tmp.Min; i < tmp.Max; i++) 
+                        {
+                           // var f = liste[i];
+                            int xxi = 9;
+                        }
+                        /*
                         var tmp = (CountableAttribute)attr;
                         
                         foreach (WaitForChangedResult akt2 in liste)
@@ -159,7 +169,7 @@ namespace AlienCharBuilderLogic.Factory
 
                 if (string.IsNullOrEmpty(sheetName)) continue;
 
-                var wert = prop.GetValue(character);
+                var wert = prop.GetValue(dataObject);
                 if (wert is int)
                 {
                     int wertAsInt = (int)wert;

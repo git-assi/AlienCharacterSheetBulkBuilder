@@ -12,7 +12,7 @@ namespace AlienCharBuilderLogic
         {
 
             var fac = new CharacterFactory();
-            fac.platoon = "first";
+            fac.Platoon = "first";
 
             var data = new Dictionary<string, string>();
             fac.ReadObjectProperties(fac.CreateCharacter("Marine"), data);

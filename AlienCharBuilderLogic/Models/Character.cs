@@ -57,7 +57,6 @@ namespace AlienCharBuilderLogic.Models
         public Armor Armor { get; set; } = new Armor();
 
         [CountableAttribute(Min = 0, Max = 4)]
-        [ComplexDataAttribute()]
         public List<Weapon> Weapons { get; set; } = new List<Weapon> { };
     }
 }
