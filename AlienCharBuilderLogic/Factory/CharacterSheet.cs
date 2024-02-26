@@ -31,21 +31,32 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.TinyItems.AddItem("Zigarette");
             newCharacter.TinyItems.AddItem("Zigarette");
 
-            newCharacter.Attributes.Wits.Value = 2;
-            newCharacter.Attributes.Wits.Survival = 1;
+            newCharacter.Attributes.Wits.Value = randoIntAttribute();
+            newCharacter.Attributes.Wits.Survival = randoIntAttribute();
+            newCharacter.Attributes.Wits.Comtech = randoIntAttribute();
+            newCharacter.Attributes.Wits.Observation = randoIntAttribute();
 
-            newCharacter.Attributes.Agility.Value = 2;
-            newCharacter.Attributes.Agility.Piloting = 1;
+            newCharacter.Attributes.Agility.Value = randoIntAttribute();
+            newCharacter.Attributes.Agility.Piloting = randoIntAttribute();
+            newCharacter.Attributes.Agility.RangedCombat = randoIntAttribute();
+            newCharacter.Attributes.Agility.Mobilty = randoIntAttribute();
 
-            newCharacter.Attributes.Strength.Value = 2;
-            newCharacter.Attributes.Strength.HeavyMachinery = 1;
+            newCharacter.Attributes.Strength.Value = randoIntAttribute();
+            newCharacter.Attributes.Strength.HeavyMachinery = randoIntAttribute();
+            newCharacter.Attributes.Strength.Stamina = randoIntAttribute();
+            newCharacter.Attributes.Strength.CloseCombat = randoIntAttribute();
 
-            newCharacter.Attributes.Empathy.Value = 2;
-            newCharacter.Attributes.Empathy.Manipulation = 1;
+            newCharacter.Attributes.Empathy.Value = randoIntAttribute();
+            newCharacter.Attributes.Empathy.Manipulation = randoIntAttribute();
+            newCharacter.Attributes.Empathy.MedicalAid = randoIntAttribute();
+            newCharacter.Attributes.Empathy.Command = randoIntAttribute();
 
             return newCharacter;
         }
-
+        private int randoIntAttribute()
+        {
+            return RandomGen.Next(4);
+        }
 
 
         private List<Gear> GetRandomGear()

@@ -14,6 +14,13 @@ namespace AlienCharBuilderLogic
             var fac = new CharacterFactory();
             fac.platoon = "first";
 
+            var data = new Dictionary<string, string>();
+            fac.ReadObjectProperties(fac.CreateCharacter("Marine"), data);
+
+            WriteDataInPDF(data);
+
+            return;
+
             var plt = new InGameResources.Models.Platoon()
             {
                 Lieutenant = new NPC(),
@@ -27,9 +34,9 @@ namespace AlienCharBuilderLogic
                     Dropship = new AirVehicle() { Name = "Blackfly" },
                     Wing = new FlightCrew() { Pilot = fac.CreateCharacter("Pilot"), WeaponOfficer = fac.CreateCharacter("WeaponsOfficer"), },
 
-                    FirstSquad = new Squad() 
-                    { 
-                        FirstTeam = new Team() {Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
+                    FirstSquad = new Squad()
+                    {
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
                         SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Heavy Gunner") }
                     },
 
@@ -70,6 +77,28 @@ namespace AlienCharBuilderLogic
             int xx = 1;
         }
 
+        private static void WriteDataInPDF(Dictionary<string, string> data)
+        {
+         
+            using (FileStream outFile = new FileStream($"C:\\temp\\{data["Name"]}.pdf", FileMode.Create))
+            {
+                PdfReader pdfReader = new PdfReader("alienFFCharSheet.pdf");
+                PdfStamper pdfStamper = new PdfStamper(pdfReader, outFile);
+                AcroFields fields = pdfStamper.AcroFields;
+
+                foreach (var field in fields.Fields)
+                {
+                    if (data.ContainsKey(field.Key))
+                    {
+                        fields.SetField(field.Key, data[field.Key]);
+                    }
+                }
+
+                pdfStamper.Close();
+                pdfReader.Close();
+            }
+
+        }
     }
 
 
