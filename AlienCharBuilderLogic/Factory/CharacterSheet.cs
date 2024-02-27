@@ -26,7 +26,7 @@ namespace AlienCharBuilderLogic.Factory
 
             newCharacter.Armor = GetRandomArmor();
             newCharacter.Talent = GetRandomGenericTalent();
-            newCharacter.Weapons = GetRandomWeapons();
+            newCharacter.Weapons = GetWeapons(career);
             newCharacter.Gear = GetRandomGear();
 
             newCharacter.TinyItems.AddItem("Foto");
@@ -69,25 +69,33 @@ namespace AlienCharBuilderLogic.Factory
         {
             return GearResources.Generic;
         }
-        private List<Weapon> GetRandomWeapons()
+        private List<Weapon> GetWeapons(string career)
         {
             var result = new List<Weapon>();
 
-            int rando = randoIntAttribute();
+            switch (career)
+            {
+                case Career.Constants.PILOT:
+                    result.Add(WeaonFactory.CreateRevolver());
+                    break;
 
-            if (rando == 1)
-            {
-                result.Add(WeaonFactory.CreateAssaultRifle());
-            }
-            if (rando == 2)
-            {
-                result.Add(WeaonFactory.CreatePistol());
-            }
-            if (rando == 3)
-            {
-                result.Add(WeaonFactory.CreateSmartgun());
-            }
+                case Career.Constants.MARINE:
+                    result.Add(WeaonFactory.CreateAssaultRifle());
+                    break;
 
+                case Career.Constants.HEAVY_GUNNER:
+                    result.Add(WeaonFactory.CreateSmartgun());
+                    result.Add(WeaonFactory.CreatePistol());
+                    break;
+
+                case Career.Constants.TECH:
+                    result.Add(WeaonFactory.CreatePumpgun());
+                    break;
+
+                default:
+                    result.Add(WeaonFactory.CreatePistol());
+                    break;
+            }                                   
             return result;
         }
 

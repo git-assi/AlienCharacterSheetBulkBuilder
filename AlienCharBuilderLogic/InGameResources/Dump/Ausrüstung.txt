@@ -15,8 +15,7 @@ Vollautomatisch,
 Granatwerfer
 AK-4047 Impuls-Sturmgewehr – 2 weit 1 500 $ Vollautomatisch
 Armat M42A Präzisionsgewehr +2 2 extrem 1 1000 $ Panzerbrechend
-Armat M37A2 Pumpgun Kaliber 12 +2 3 kurz 1 500 $ Doppelte
-Panzerung
+Armat M37A2 Pumpgun Kaliber 12 +2 3 kurz 1 500 $ Doppelte Panzerung
 SpaceSub ASSO-400
 Harpunenkanone
 – 1 mittel 1 300 $ Doppelte Panzerung,

@@ -17,7 +17,32 @@ namespace AlienCharBuilderLogic.Models
                 Special = "Panzerbrechend",
             };
         }
-        
+
+        public static Weapon CreatePumpgun()
+        {
+            return new Weapon()
+            {
+                Name = "Armat M37A2 Pumpgun Kaliber 12",
+                Bonus = "+2",
+                Damage = 3,
+                Range = Constans.REICHWEITE.KURZ,
+                Weight = 1,
+                Special = "Doppelte Panzerung",
+            };
+        }
+
+        public static Weapon CreateRevolver()
+        {
+            return new Weapon()
+            {
+                Name = "Revolver .357 Magnum",
+                Bonus = "+1",
+                Damage = 2,
+                Range = Constans.REICHWEITE.MITTEL,
+                Weight = 1,
+            };
+        }
+       
         public static Weapon CreateSmartgun()
         {
             return new Weapon()
@@ -48,6 +73,7 @@ namespace AlienCharBuilderLogic.Models
     {
         public class REICHWEITE
         {
+            public const string KURZ = "kurz";
             public const string WEIT = "weit";
             public const string MITTEL = "mittel";
         }

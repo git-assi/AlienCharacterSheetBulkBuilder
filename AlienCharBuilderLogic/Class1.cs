@@ -15,7 +15,7 @@ namespace AlienCharBuilderLogic
             var fac = new CharacterFactory();
 
 
-             var data = new Dictionary<string, string>();
+             /*var data = new Dictionary<string, string>();
              fac.ReadObjectProperties(fac.CreateCharacter("Marine"), data, 0);
 
              var path = WriteDataInPDF(data);
@@ -23,9 +23,9 @@ namespace AlienCharBuilderLogic
              {
                  FileName = path,
                  UseShellExecute = true
-             });
+             });*/
 
-           /* var plt = new Platoon()
+            var plt = new Platoon()
             {
                 Lieutenant = new NPC(),
                 SecondInCommand = new NPC(),
@@ -33,48 +33,48 @@ namespace AlienCharBuilderLogic
                 SectionA = new Section()
                 {                                     
                     APC = new GroundVehicle(),
-                    VehicleDriver = fac.CreateCharacter("Driver"),
+                    VehicleDriver = fac.CreateCharacter(Career.Constants.DRIVER),
 
                     Dropship = new AirVehicle() { Name = "Blackfly" },
-                    Wing = new FlightCrew() { Pilot = fac.CreateCharacter("Pilot"), WeaponOfficer = fac.CreateCharacter("WeaponsOfficer"), },
+                    Wing = new FlightCrew() { Pilot = fac.CreateCharacter(Career.Constants.PILOT), WeaponOfficer = fac.CreateCharacter(Career.Constants.WEAPONS_OFFICER), },
 
                     FirstSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
-                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Heavy Gunner") }
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.MARINE) },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.HEAVY_GUNNER) }
                     },
 
                     SecondSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
-                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Medic") }
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.MARINE) },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.MEDIC) }
                     }
                 },
 
                 SectionB = new Section()
                 {
                     APC = new GroundVehicle(),
-                    VehicleDriver = fac.CreateCharacter("Driver"),
+                    VehicleDriver = fac.CreateCharacter(Career.Constants.DRIVER),
 
                     Dropship = new AirVehicle() { Name = "Blackfly" },
-                    Wing = new FlightCrew() { Pilot = fac.CreateCharacter("Pilot"), WeaponOfficer = fac.CreateCharacter("WeaponsOfficer"), },
+                    Wing = new FlightCrew() { Pilot = fac.CreateCharacter(Career.Constants.PILOT), WeaponOfficer = fac.CreateCharacter(Career.Constants.WEAPONS_OFFICER), },
 
                     FirstSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
-                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Heavy Gunner") }
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.MARINE) },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.HEAVY_GUNNER) }
                     },
 
                     SecondSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Marine") },
-                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter("Marine"), Marine2 = fac.CreateCharacter("Tech") }
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.MARINE) },
+                        SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Career.Constants.MARINE), Marine2 = fac.CreateCharacter(Career.Constants.TECH) }
                     }
                 },
             };
 
             
-            */
+            
             /*var data = new Dictionary<string, string>();
             fac.ReadObjectProperties(newChar, data);
             */
