@@ -32,7 +32,7 @@ namespace AlienCharBuilderLogic.Models
         public int Radiation { get; set; }
 
         [SheetnameAttribute(Sheetname = Constants.ENCUMBRANCE)]
-        public int Encumbrance { get; set; }
+        public string Encumbrance { get; set; } = string.Empty;
 
     }
 }

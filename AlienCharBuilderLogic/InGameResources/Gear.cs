@@ -6,10 +6,10 @@ namespace AlienCharBuilderLogic.InGameResources
     {
         public static List<Gear> Generic = new List<Gear>()
         {
-                new Gear() { Name = "Schneidbrenner" },
-                new Gear() { Name = "Schraubenzieher" },
-                new Gear() { Name = "Feuerzeug" },
-                new Gear() { Name = "Taschenlampe" },
+                new Gear() { Name = "Schneidbrenner", Weight = 2 },
+                new Gear() { Name = "Schraubenzieher", Weight = 0.5 },
+                new Gear() { Name = "Feuerzeug", Weight = 0.1 },
+                new Gear() { Name = "Taschenlampe" , Weight = 0.2 },
                 new Gear() { Name = "Bindfaden" },
         };
     }

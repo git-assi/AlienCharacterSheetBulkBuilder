@@ -1,7 +1,7 @@
 ﻿using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
 using AlienCharBuilderLogic.PropertyAttributes;
-using System.Linq;
+using System.Collections.Generic;
 
 
 namespace AlienCharBuilderLogic.Factory
@@ -10,14 +10,18 @@ namespace AlienCharBuilderLogic.Factory
     {
         private static readonly Random RandomGen = new();
 
-        public string Platoon { get; set; } = string.Empty;
+        public Dictionary<string, string> ExtraInfo { get; set; } = new Dictionary<string, string>();
+        public string GetExtraInfo()
+        {
+            return string.Join(", ", ExtraInfo.Select(pair => $"{pair.Key}: {pair.Value}"));
+        }
 
         public Character CreateCharacter(string career)
         {
             var newCharacter = new Character();
             (string name, string geschlecht) = GetNameUndGeschlecht();
-            newCharacter.Appearance = geschlecht + " " + Platoon + " Platoon";
-            newCharacter.Name = name;
+            newCharacter.Appearance = GetExtraInfo();
+            newCharacter.Name = name + $"({geschlecht})";
             newCharacter.Career = career;
 
             newCharacter.Armor = GetRandomArmor();
@@ -51,6 +55,8 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Attributes.Empathy.MedicalAid = randoIntAttribute();
             newCharacter.Attributes.Empathy.Command = randoIntAttribute();
 
+            newCharacter.Conditions.Encumbrance = ReadObjectWeight(newCharacter).ToString("F2");
+
             return newCharacter;
         }
         private int randoIntAttribute()
@@ -65,10 +71,24 @@ namespace AlienCharBuilderLogic.Factory
         }
         private List<Weapon> GetRandomWeapons()
         {
-            return new List<Weapon>()
+            var result = new List<Weapon>();
+
+            int rando = randoIntAttribute();
+
+            if (rando == 1)
             {
-                WeaonFactory.CreateAssaultRifle(),
-            };
+                result.Add(WeaonFactory.CreateAssaultRifle());
+            }
+            if (rando == 2)
+            {
+                result.Add(WeaonFactory.CreatePistol());
+            }
+            if (rando == 3)
+            {
+                result.Add(WeaonFactory.CreateSmartgun());
+            }
+
+            return result;
         }
 
         private Talent GetRandomGenericTalent()
@@ -120,7 +140,46 @@ namespace AlienCharBuilderLogic.Factory
             return (name, geschlecht);
         }
 
-        public void ReadObjectProperties(object dataObject, Dictionary<string, string> result)
+        public double ReadObjectWeight(object dataObject)
+        {
+            double result = 0;
+            foreach (var prop in dataObject.GetType().GetProperties())
+            {
+                foreach (System.Attribute attr in prop.GetCustomAttributes(true))
+                {
+                    if (attr is WeightAttribute)
+                    {
+                        result += (double)prop.GetValue(dataObject);
+                        break;
+                    }
+                    if (attr is ComplexDataAttribute)
+                    {
+                        result += ReadObjectWeight(prop.GetValue(dataObject));
+                    }
+                    if (attr is CountableAttribute)
+                    {
+                        if (prop.GetValue(dataObject) is IEnumerable<object> enumerable)
+                        {
+                            var tmp = (CountableAttribute)attr;
+                            var minMax = (tmp.Min, tmp.Max);
+                            int i = 0;
+                            foreach (var item in enumerable)
+                            {
+                                i++;
+                                if (i > minMax.Item2)
+                                {
+                                    break;
+                                }
+                                result += ReadObjectWeight(item);
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        public void ReadObjectProperties(object dataObject, Dictionary<string, string> result, int level)
         {
             foreach (var prop in dataObject.GetType().GetProperties())
             {
@@ -131,39 +190,34 @@ namespace AlienCharBuilderLogic.Factory
                 {
                     if (attr is ComplexDataAttribute)
                     {
-                        ReadObjectProperties(prop.GetValue(dataObject), result);
+                        ReadObjectProperties(prop.GetValue(dataObject), result, level);
                     }
                     if (attr is SheetnameAttribute)
                     {
-                        sheetName = ((SheetnameAttribute)attr).Sheetname;
+                        sheetName = ((SheetnameAttribute)attr).Sheetname.Replace("[n]", level.ToString());
                     }
                     if (attr is MinMaxAttribute)
-                    { 
+                    {
                         var tmp = (MinMaxAttribute)attr;
                         minMax = (tmp.Min, tmp.Max);
                     }
                     if (attr is CountableAttribute)
                     {
-                    
-                        var liste = prop.GetValue(dataObject);
-
-                       
-
-
                         var tmp = (CountableAttribute)attr;
                         minMax = (tmp.Min, tmp.Max);
-                        for (int i = tmp.Min; i < tmp.Max; i++) 
+                        if (prop.GetValue(dataObject) is IEnumerable<object> enumerable)
                         {
-                           // var f = liste[i];
-                            int xxi = 9;
+                            int i = minMax.Item1;
+                            foreach (var item in enumerable)
+                            {
+                                i++;
+                                if (i > minMax.Item2)
+                                {
+                                    break;
+                                }
+                                ReadObjectProperties(item, result, i);
+                            }
                         }
-                        /*
-                        var tmp = (CountableAttribute)attr;
-                        
-                        foreach (WaitForChangedResult akt2 in liste)
-                        {
-                            int i = 0;    
-                        }*/
                     }
                 }
 

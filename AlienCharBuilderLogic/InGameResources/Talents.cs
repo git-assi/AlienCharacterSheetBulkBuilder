@@ -7,6 +7,7 @@ namespace AlienCharBuilderLogic.InGameResources
     {
         public static List<Talent> Generic = new List<Talent>()
         {
+            new Talent() { Name = "Rapid fire", Description = "Du kannst eine Pistole oder ein Gewehr als schnelle Aktion abfeuern (statt als langsame),musst dann aber einen Modifikator von −2 hinnehmen." },
                 new Talent() { Name = "Bodyguard", Description = "" },
                 new Talent() { Name = "Calm Breather", Description = "" },
                 new Talent() { Name = "Counselor", Description = "" },
@@ -25,8 +26,7 @@ namespace AlienCharBuilderLogic.InGameResources
                 new Talent() { Name = "Merciless", Description = "" },
                 new Talent() { Name = "Nerves of Steel", Description = "" },
                 new Talent() { Name = "Pack Mule", Description = "" },
-                new Talent() { Name = "Quick draw", Description = "" },
-                new Talent() { Name = "Rapid fire", Description = "" },
+                new Talent() { Name = "Quick draw", Description = "" },                
                 new Talent() { Name = "Rapid Reload", Description = "" },
                 new Talent() { Name = "Second Wind", Description = "" },
                 new Talent() { Name = "Spaceship Commander", Description = "" },

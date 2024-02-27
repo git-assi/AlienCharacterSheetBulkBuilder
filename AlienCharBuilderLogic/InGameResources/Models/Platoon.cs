@@ -6,23 +6,18 @@ namespace AlienCharBuilderLogic.InGameResources.Models
     {
         public required NPC Lieutenant { get; set; }
         public required NPC SecondInCommand { get; set; }
-
         public required Section SectionA { get; set; }
         public required Section SectionB { get; set; }
     }
 
     public class Section
-    {
-        public string Name { get; set; } = string.Empty;
-
+    {        
         public required AirVehicle Dropship { get; set; }
         public required FlightCrew Wing { get; set; }
         public required GroundVehicle APC { get; set; }
         public required Character VehicleDriver { get; set; }
-
         public required Squad FirstSquad { get; set; }
         public required Squad SecondSquad { get; set; }
-
     }
 
     public class FlightCrew

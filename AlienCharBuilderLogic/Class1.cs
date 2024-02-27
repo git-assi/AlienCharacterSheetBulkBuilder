@@ -3,6 +3,7 @@ using AlienCharBuilderLogic.InGameResources.Models;
 using AlienCharBuilderLogic.Models;
 using iTextSharp.text.pdf;
 using System.Data;
+using System.Diagnostics;
 
 namespace AlienCharBuilderLogic
 {
@@ -12,22 +13,25 @@ namespace AlienCharBuilderLogic
         {
 
             var fac = new CharacterFactory();
-            fac.Platoon = "first";
 
-            var data = new Dictionary<string, string>();
-            fac.ReadObjectProperties(fac.CreateCharacter("Marine"), data);
 
-            WriteDataInPDF(data);
+             var data = new Dictionary<string, string>();
+             fac.ReadObjectProperties(fac.CreateCharacter("Marine"), data, 0);
 
-            return;
+             var path = WriteDataInPDF(data);
+             Process.Start(new ProcessStartInfo
+             {
+                 FileName = path,
+                 UseShellExecute = true
+             });
 
-            var plt = new InGameResources.Models.Platoon()
+           /* var plt = new Platoon()
             {
                 Lieutenant = new NPC(),
                 SecondInCommand = new NPC(),
 
                 SectionA = new Section()
-                {
+                {                                     
                     APC = new GroundVehicle(),
                     VehicleDriver = fac.CreateCharacter("Driver"),
 
@@ -69,18 +73,18 @@ namespace AlienCharBuilderLogic
                 },
             };
 
-
-
+            
+            */
             /*var data = new Dictionary<string, string>();
             fac.ReadObjectProperties(newChar, data);
             */
             int xx = 1;
         }
 
-        private static void WriteDataInPDF(Dictionary<string, string> data)
+        private static string WriteDataInPDF(Dictionary<string, string> data)
         {
-         
-            using (FileStream outFile = new FileStream($"C:\\temp\\{data["Name"]}.pdf", FileMode.Create))
+            string path = $"{data["Name"]}.pdf";
+            using (FileStream outFile = new FileStream(path, FileMode.Create))
             {
                 PdfReader pdfReader = new PdfReader("alienFFCharSheet.pdf");
                 PdfStamper pdfStamper = new PdfStamper(pdfReader, outFile);
@@ -88,16 +92,20 @@ namespace AlienCharBuilderLogic
 
                 foreach (var field in fields.Fields)
                 {
+                    data["Stress1"] = "Yes";
+                    data["Freezing"] = "Yes";
+
                     if (data.ContainsKey(field.Key))
                     {
                         fields.SetField(field.Key, data[field.Key]);
                     }
+
                 }
 
                 pdfStamper.Close();
                 pdfReader.Close();
             }
-
+            return path;
         }
     }
 

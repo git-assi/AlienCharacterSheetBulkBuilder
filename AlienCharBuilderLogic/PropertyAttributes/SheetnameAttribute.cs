@@ -7,6 +7,12 @@
     }
 
     [AttributeUsage(AttributeTargets.Property)]
+    public class WeightAttribute : Attribute
+    {       
+    }
+    
+
+    [AttributeUsage(AttributeTargets.Property)]
     public class MinMaxAttribute : Attribute
     {
         public int Min { get; set; }

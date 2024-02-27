@@ -43,8 +43,8 @@ namespace AlienCharBuilderLogic.Models
         public TinyItems TinyItems { get; set; } = new TinyItems { };
 
         public string SignatureItem { get; set; } = string.Empty;
-        
-        [ComplexDataAttribute()]
+
+        [CountableAttribute(Min = 0, Max = 10)]
         public List<Gear> Gear { get; set; } = new List<Gear> { };
 
         public Consumables Consumables { get; set; } = new Consumables();
