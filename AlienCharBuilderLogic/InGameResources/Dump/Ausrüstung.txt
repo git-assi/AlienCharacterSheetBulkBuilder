@@ -1,0 +1,165 @@
+﻿Pistolen
+WAFFE BONUS SCHADEN REICHWEITE GEWICHT KOSTEN SPEZIAL
+Armat M4A3 Dienstpistole +2 1 mittel 1/2 200 $ –
+Revolver .357 Magnum +1 2 mittel 1 300 $ –
+Rexim RXF-M5
+Außenbordpistole
++1 1 mittel 1/2 400 $ Panzerbrechend
+Watatsumi DV-303
+Bolzenschussgerät
+
+Gewehre
+WAFFE BONUS SCHADEN REICHWEITE GEWICHT KOSTEN SPEZIAL
+Armat M41A Impulsgewehr +1 2 weit 1 1200 $ Panzerbrechend,
+Vollautomatisch,
+Granatwerfer
+AK-4047 Impuls-Sturmgewehr – 2 weit 1 500 $ Vollautomatisch
+Armat M42A Präzisionsgewehr +2 2 extrem 1 1000 $ Panzerbrechend
+Armat M37A2 Pumpgun Kaliber 12 +2 3 kurz 1 500 $ Doppelte
+Panzerung
+SpaceSub ASSO-400
+Harpunenkanone
+– 1 mittel 1 300 $ Doppelte Panzerung,
+Einschüssig
+Armat XM99A
+Phasen-Plasma-Impulsgewehr
+– 4 extrem 2 20.000 $ Panzerbrechend,
+Energie 5
+
+Schwere Waffen
+WAFFE BONUS SCHADEN REICHWEITE GEWICHT KOSTEN SPEZIAL
+Armat U1 Granatwerfer +1 Explosion
+9
+weit 1/2 600 $ kann andere
+Granatentypen
+abfeuern
+Armat M41AE2 Schweres
+Impulsgewehr
++1 3 extrem 2 1500 $ Panzerbrechend,
+Vollautomatisch
+M56A2 „Smartgun“ +3 3 weit 3 6000 $ Panzerbrechend,
+Vollautomatisch
+M240 Verbrennungseinheit – 2 mittel 1 500 $ Feuerintensität 9
+UA 571-C Geschützturm +2 4 extrem – 12.000 $ Panzerbrechend,
+Vollautomatisch,
+FERNKAMPF 8
+
+Anzüge und Panzerungen
+SCHUTZKLEIDUNG PANZERUNG LUFT GEWICHT KOSTEN SPEZIAL
+Armat M3 Körperpanzerung 6 – 1 1200 $ –
+IRC Mk. 50
+Kompressionsanzug
+2 5 1 15.000 $ –
+IRC Mk. 35 Druckanzug 5 4 2 2000 $ GESCHICKLICHKEIT −1
+Eco All-World Systems
+Überlebensanzug
+4 6 2 30.000 $ –
+Weyland-Yutani APE-Anzug 3 4 1 5000 $ ÜBERLEBEN +3
+Caterpillar P-5000
+Laderoboter
+
+Sichtgeräte
+GERÄT GEWICHT KOSTEN AUSWIRKUNG
+Zielfernrohr 0 60 $ Reichweite bei Aktion „Zielen“ um eine Kategorie
+erhöht; nur Pistolen und Gewehre
+Fernglas 1/2 100 $ WAHRNEHMUNG +2 auf WEITE oder EXTREME
+Entfernungen
+Starklicht-Taschenlampe 1/2 45 $ keine Auswirkungen von Dunkelheit innerhalb der Zone
+M314 Bewegungssensor 1 1200 $ siehe Seite 86; WEITE Entfernung in Innenräumen;
+Energie 5
+M316 Bewegungssensor 0 3000 $ siehe Seite 86; MITTLERE Entfernung in Innenräumen;
+Energie 3
+Headset-Visier 1/2 200 $ Zielerfassung mit Smartgun oder Geschützturm
+Neuro-Visor 1 10.000 $ Überwachung von Personen im Hyperschlaf
+Weyland-Yutani Parameter-
+Uplink-Spektrograph
+1 50.000 $ eine Zone pro Runde scannen (Feinde entdecken);
+Betriebsreichweite EXTREM
+Seegson
+„Microview“-2000SE
+– 25.000 $ pro
+Kartenset
+Standorterfassung
+133
+
+Werkzeuge
+GERÄT GEWICHT KOSTEN AUSWIRKUNG
+Watatsumi DV-303 Bolzenschussgerät 1 400 $ SCHWERE MASCHINEN +2
+Schneidbrenner 1 300 $ SCHWERE MASCHINEN +2, Energie 5
+Seegson Wartungsheber 1 150 $ SCHWERE MASCHINEN +1
+Elektronikwerkzeug 1/2 250 $ COMTECH +1
+
+Medizinische Ausstattung
+GERÄT GEWICHT KOSTEN AUSWIRKUNG
+MedKit 1/4 50 $ einmalig MEDIZINISCHE HILFE +2
+Chirurgie-Set 1/2 25–200 $ MEDIZINISCHE HILFE +1 um Leben zu retten;
+zählt im Nahkampf als Messer
+Pauling MedPod – 2.000.000 $ programmieren mit COMTECH +2; MEDIZINISCHE HILFE 10
+AutoDoc – 500.000 $ programmieren mit COMTECH; MEDIZINISCHE HILFE 6
+
+Medikamente
+SUBSTANZ GEWICHT KOSTEN AUSWIRKUNG
+Nimmerschlaf-Tabletten 0 2 $ kein Schlaf nötig für einen Tag, STRESSLEVEL +1
+Hydr8tion 0 5 $ kein Zustand „Verdursten“ nach Hyperschlaf
+Naproleve 0 20 $ reduziert STRESSLEVEL auf 0; jede Dosis nach erster in
+einer Schicht: GESCHICKLICHKEIT −1
+Freizeitdrogen 0 unterschiedlich unterschiedlich
+X-Drogen 0 unterschiedlich unterschiedlich
+
+Nahrung und Getränke
+LEBENSMITTEL GEWICHT KOSTEN AUSWIRKUNG
+Schokoriegel 1/4 2–5 $ Nahrung +1
+Fertiggericht 1/4 10 $ Nahrung +1
+Spezialitätengericht einer Kolonie 1/4 20–300 $ Nahrung +1, STRESSLEVEL −1
+Proteindrink („Käfersaft“) 1/4 5 $ Nahrung und Wasser +1
+Mineralwasser 1/4 2–100 $ Wasser +1
+Limonade 1/4 2 $ Wasser +1
+Kaffee 0 0–1,50 $/Tasse STRESSLEVEL +1, ignoriere Erschöpfung
+für eine Schicht
+Bier 1/4 4 $ STRESSLEVEL −1, −1 auf alle
+VERSTAND-Fertigkeiten
+Schnaps 1 10-500 $/Flasche STRESSLEVEL −1, −1 auf alle VERSTANDFertigkeiten
+(pro Glas)
+
+Fahrzeuge
+FAHRZEUG PASSAGIERE MANÖVRIERBARKEIT GESCHWINDIGKEIT RUMPF PANZERUNG KOSTEN
+Daihotai 8x8-Traktor 4 +0 2 6 4 17.000 $
+Weyland NR-9
+Geländewagen
+1 +2 2 2 2 3000 $
+M577 Gepanzerter
+Mannschaftstransporter
+13 +1 3 8 8 500.000 $
+Aerodyne „Gyrocar“ 5 +3 3 4 3 40.000 $
+UD-4L „Cheyenne“
+Abwurfschiff
+15 +2 4 10 7 3.100.000 $
+WY-37B „Cargo Lifter“
+Transportschlitten
+3
+
+Fahrzeugwaffen
+WAFFE BONUS SCHADEN REICHWEITE KOSTEN SPEZIAL
+Gatling-Kanone 20 mm +3 3 weit 7500 $ Panzerbrechend, Vollautomatisch
+Gatling-Kanone 25 mm +3 3 extrem 9000 $ Panzerbrechend, Vollautomatisch
+Phasen-Plasma
+Impulskanone
++1 6 extrem 54.000 $ Panzerbrechend
+frei bewegliche
+Flammenwerfereinheit
+– 4 mittel 4200 $ Feuerintensität 9
+Mk. 16 „Banshee 70“
+Mehrfachraketenwerfer
+150 mm
+– 3 weit 48.000 $ explodiert am Ziel mit Detonationskraft
+12 zusätzlich zum direkten
+Schaden, Vollautomatisch
+AGM-220C „Hellhound II“
+Lenkflugkörperbatterie
++2 7 extrem 76.000 $ kann nur auf Bodenfahrzeuge und
+Gebäude abgefeuert werden, Panzerbrechend,
+Kosten pro Rakete: 12.000 $
+AIM-90E „Headlock“
+Luft-Luft-Raketenbatterie
++3 5 extrem 64.000 $ kann nur auf Luftfahrzeuge abgefeuert
+werden, Kosten pro Rakete: 9000 $

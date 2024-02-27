@@ -1,0 +1,145 @@
+Arzt
+
+HAUPTATTRIBUT: Empathie
+T HAUPTFERTIGKEITEN: Beweglichkeit,Wahrnehmung, Medizinische Hilfe
+T BERUFSTALENTE: Beruhigende Präsenz,Mitgefühl, Feldarzt
+
+S TA R TAU S R Ü ST U N G
+
+T Chirurgie-Set ODER IRC Mk. 50 Kompressionsanzug
+T W6 Dosen Naproleve ODER W6 Dosen Nimmerschlaf-Tabletten
+T MedKit ODER W6 Dosen experimentelle X-Drogen
+T Samani E-Serie Armbanduhr ODER Handfunkgerät
+
+AU S S E H E N
+Entscheide dich für eines oder mehrere der folgenden
+Merkmale oder denke dir selbst etwas aus.
+T sympathisches Lächeln
+T ordentliche Frisur
+T dunkle Ringe unter den Augen
+T unruhige, ruhelose Hände
+T sanfte Stimme
+T mitfühlender Blick
+T kalter Blick
+T Brille
+T weißer Kittel
+
+
+Marine
+HAUPTATTRIBUT: Stärke
+T HAUPTFERTIGKEITEN: Nahkampf, Ausdauer, Fernkampf
+T BERUFSTALENTE: Harte Schale, Overkill, Über das Limit
+
+S TA R TAU S R Ü ST U N G
+
+T M41A Impulsgewehr ODER M56A2 „Smartgun“
+T M314 Bewegungssensor ODER 2x G2 Elektroschock-Granaten
+T IRC MK. 35 Druckanzug ODER M3 Körperpanzerung
+T Leuchtfackel ODER Kartenspiel
+
+AU S S E H E N
+Entscheide dich für eines oder mehrere der folgenden
+Merkmale oder denke dir selbst etwas aus.
+T Bürstenhaarschnitt
+T militärische Tätowierung
+T auffällige Narbe
+T kalte Augen
+T großspuriges Grinsen
+T individuell gestaltete Körperpanzerung
+
+
+P E R S Ö N L I C H E R
+G E G E N STAND
+Entscheide dich für einen der folgenden Gegenstände
+oder denke dir selbst einen aus.
+T Projektil, das du überlebt hast
+T Erkennungsmarke des Freundes, den du verloren
+hast
+T Trophäe eines besiegten Feindes
+
+Offizier
+
+HAUPTATTRIBUT: Empathie
+T HAUPTFERTIGKEITEN: Fernkampf, Befehligen,Manipulation
+T BERUFSTALENTE: Feldkommandeur, Einfluss,Einberufen
+
+M4A3 Dienstpistole ODER Rexim RXF-M5 Außenbordpistole
+T Samani E-Serie Armbanduhr ODER Fernglas
+T M314 Bewegungssensor ODER IRC Mk. 50 Kompressionsanzug
+T Seegson P-DAT ODER FFE-Transponder
+
+AU S S E H E N
+Entscheide dich für eines oder mehrere der folgenden
+Merkmale oder denke dir selbst etwas aus.
+T Bürstenhaarschnitt oder Pferdeschwanz
+T ernster Blick
+T makellose Uniform
+T überarbeitet und ausgelaugt
+T steife Körperhaltung
+T entspannte und beruhigende Stimme
+T Arbeitsoverall mit Aufnäher des Schiffsnamens
+T unruhiges Fußwippen
+
+
+Pilot
+
+HAUPTATTRIBUT: Geschicklichkeit
+T HAUPTFERTIGKEITEN: Fahrzeuge lenken, Fernkampf, Comtech
+T BERUFSTALENTE: Vollgas, Waghalsig, Wie deine Westentasche
+
+P E R S Ö N L I C H E R G E G E N STAND
+T Figur für das Armaturenbrett
+T Piloten-Logbuch
+T Pilotenbrille
+
+M4A3 Dienstpistole ODER T-PFS Funkfernsteuerung
+T Handfunkgerät ODER W6 Leuchtfackeln
+T Wartungsheber ODER Seegson P-DAT
+T Seegson Systemdiagnosegerät ODER IRC Mk. 50 Kompressionsanzug
+
+AU S S E H E N
+Entscheide dich für eines oder mehrere der folgenden
+Merkmale oder denke dir selbst etwas aus.
+T arroganter Gang
+T stahlblaue Augen
+T Fluganzug mit vielen Taschen
+T Sonnenbrille
+T Aufnäher mit Schiffsnamen früherer Missionen
+T gleichgültiger Gesichtsausdruck
+T Kaugummi im Mund
+T skeptischer Blick
+
+
+Maschinist
+
+HAUPTATTRIBUT: Stärke
+T HAUPTFERTIGKEITEN: Schwere Maschinen,
+Ausdauer, Nahkampf
+T BERUFSTALENTE: Widerstandsfähig,
+Abgebrüht, Wahrer Schneid
+
+AU S S E H E N
+Entscheide dich für eines oder mehrere der folgenden
+Merkmale oder denke dir selbst etwas aus.
+T Tätowierungen
+T Narben
+T gebrochene Nase
+T freudlose Augen
+T hämisches Grinsen
+T lautes, ehrliches Lachen
+T schmutzige und schwielige Hände
+T dicke Schutzbrille
+T dreckige Stiefel, die beim Gehen laut klappern
+T wilde Frisur
+
+S TA R TAU S R Ü ST U N G
+Entscheide dich für zwei Gegenstände aus der folgenden
+Liste. Du bekommst außerdem Geld in Höhe
+von W6 x 100 $ in bar.
+T Schneidbrenner
+ODER Watatsumi DV-303 Bolzenschussgerät
+T W6 Dosen Hydr8tion ODER Wartungsheber
+T großer Vorrat Schnaps
+ODER IRC Mk. 50 Kompressionsanzug
+T Starklicht-Taschenlampe
+ODER Seegson C-Serie Magnetbandrekorder
