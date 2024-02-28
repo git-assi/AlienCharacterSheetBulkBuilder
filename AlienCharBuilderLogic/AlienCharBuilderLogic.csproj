@@ -21,9 +21,6 @@
     <None Update="alienFFCharSheet.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="alienFFCharSheet2.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="result.pdf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
