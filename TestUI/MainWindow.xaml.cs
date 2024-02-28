@@ -32,5 +32,17 @@ namespace TestUI
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void Button_save_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                AlienCharBuilderLogic.InGameResources.JSONConverter.WriteObjectToJsonFile<List<string>>("Planet_Names.json", AlienCharBuilderLogic.InGameResources.Names.Planet_Names);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

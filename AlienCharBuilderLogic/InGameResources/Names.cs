@@ -2,7 +2,7 @@
 namespace AlienCharBuilderLogic.InGameResources
 {
     //https://donjon.bin.sh/alien/name/#type=alien_rpg_male
-    internal class Names
+    public class Names
     {
         public static List<string> Male = new List<string>()
         {

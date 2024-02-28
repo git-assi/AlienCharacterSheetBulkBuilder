@@ -2,7 +2,7 @@
 
 namespace AlienCharBuilderLogic.Models
 {
-    public class WeaonFactory
+    public class WeaponFactory
     {
     
         public static Weapon CreateAssaultRifle()

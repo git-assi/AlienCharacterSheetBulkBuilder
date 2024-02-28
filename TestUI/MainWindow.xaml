@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:TestUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
         <Button Click="Button_Click">Do Stuff</Button>
-    </Grid>
+        <Button Click="Button_save_Click">Save Stuff</Button>
+    </StackPanel>
 </Window>
