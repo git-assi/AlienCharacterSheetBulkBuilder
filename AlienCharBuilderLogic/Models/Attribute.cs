@@ -1,5 +1,10 @@
 ﻿using AlienCharBuilderLogic.PropertyAttributes;
 
+//StartAttribute in Summe 14
+//Hauptattribut (durch Klasse) darf max 5
+//Fertigkeiten 10 
+//Fertigkeiten +1 Hauptfertigkeiten +3 bei Start
+
 namespace AlienCharBuilderLogic.Models
 {
     public class Attribute
