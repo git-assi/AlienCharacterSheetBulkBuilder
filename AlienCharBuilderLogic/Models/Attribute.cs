@@ -9,9 +9,12 @@ namespace AlienCharBuilderLogic.Models
 {
     public class Attribute
     {
-        public int AttributesSum()
+        public int AttributesSum
         {
-            return Strength.Value + Agility.Value + Wits.Value + Empathy .Value;
+            get
+            {
+                return Strength.Value + Agility.Value + Wits.Value + Empathy.Value;
+            }
         }
 
         [ComplexDataAttribute]
