@@ -9,5 +9,6 @@
     <StackPanel>
         <Button Click="Button_Click">Do Stuff</Button>
         <Button Click="Button_save_Click">Save Stuff</Button>
+        <Button Click="Button_xml_Click">XML Stuff</Button>
     </StackPanel>
 </Window>

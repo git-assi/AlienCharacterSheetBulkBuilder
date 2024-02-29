@@ -1,8 +1,7 @@
-﻿
-namespace AlienCharBuilderLogic.PropertyAttributes
+﻿namespace AlienCharBuilderLogic.Constants
 {
-    public class Constants
-    {        
+    public class PropertyAttributes
+    {
         public const string AGENDA = "Agenda";
 
         public const string ARMOR = "Armor";
@@ -43,12 +42,11 @@ namespace AlienCharBuilderLogic.PropertyAttributes
         public const string COMTECH = "Com";
         public const string MEDICALAID = "MA";
         public const string MANIPULATION = "Man";
-        
+
         public const string COMMAND = "Cmd";
         public const string PILOTING = "P";
         public const string MOBILTY = "Mo";
         public const string RANGED_COMBAT = "RC";
         public const string ENCUMBRANCE = "Enc";
-        
     }
 }

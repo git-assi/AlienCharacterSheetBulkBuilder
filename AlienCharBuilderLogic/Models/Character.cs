@@ -15,32 +15,32 @@ namespace AlienCharBuilderLogic.Models
         }
 
 
-        [SheetnameAttribute(Sheetname = Constants.AGENDA)]
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.AGENDA)]
         public string Agenda { get; set; } = string.Empty;
 
-        [SheetnameAttribute(Sheetname = Constants.NAME)]
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.NAME)]
         public string Name { get; set; } = string.Empty;
 
-        [SheetnameAttribute(Sheetname = Constants.CAREER)]
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.CAREER)]
         public string Career { get; set; } = string.Empty;
 
-        [SheetnameAttribute(Sheetname = Constants.BUDDY)]
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.BUDDY)]
         public string Buddy { get; set; } = string.Empty;
 
-        [SheetnameAttribute(Sheetname = Constants.RIVAL)]
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.RIVAL)]
         public string Rival { get; set; } = string.Empty;
 
-        [SheetnameAttribute(Sheetname = Constants.APPEARANCE)]
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.APPEARANCE)]
         public string Appearance { get; set; } = string.Empty;
 
         [ComplexDataAttribute]
-        public Conditions Conditions { get; set; } = new Conditions { };
+        public required Conditions Conditions { get; set; }
 
         [ComplexDataAttribute]
-        public Talent Talent { get; set; } = new Talent { };
+        public required Talent Talent { get; set; }
 
         [ComplexDataAttribute]
-        public TinyItems TinyItems { get; set; } = new TinyItems { };
+        public required TinyItems TinyItems { get; set; }
 
         public string SignatureItem { get; set; } = string.Empty;
 

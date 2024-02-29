@@ -1,13 +1,7 @@
 ﻿using AlienCharBuilderLogic;
+using AlienCharBuilderLogic.InGameResources;
+using AlienCharBuilderLogic.Models;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TestUI
 {
@@ -27,7 +21,7 @@ namespace TestUI
             {
                 Class1.Narf();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -43,6 +37,29 @@ namespace TestUI
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Button_xml_Click(object sender, RoutedEventArgs e)
+        {
+            int i = 0;
+            string pfad = @".\InGameResources\Dump\AllgemeineTalente.txt";
+            List<string> talents = System.IO.File.ReadAllText(pfad).Replace(Environment.NewLine, " ").Replace("  ", " ").Trim().Split("#").ToList();
+            var generalTalents = new List<AlienCharBuilderLogic.Models.Talent>();
+
+            foreach(var aktTalent in talents)
+            {
+                var aktSPlit = aktTalent.Split(":");
+                generalTalents.Add(new Talent()
+                {
+                    Category = AlienCharBuilderLogic.Constants.Talent.GENERAL,
+                    Description = aktSPlit[1].Trim(),
+                    Name = aktSPlit[0].Trim().Substring(0,1) + aktSPlit[0].Trim().Substring(1).ToLower().Trim(),
+                }) ;
+            }
+
+             pfad = "C:\\Temp\\Ergebnis.json";
+            JSONConverter.WriteObjectToJsonFile(pfad, generalTalents);
+
         }
     }
 }

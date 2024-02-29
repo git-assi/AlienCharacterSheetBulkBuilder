@@ -1,7 +1,7 @@
 ﻿AUSSENBORDSPEZIALIST: Du hast schon
 viele Weltraumspaziergänge hinter dir. Du erhältst einen
 Modifikator von +2 bei Würfen auf SCHWERE MASCHINEN
-und COMTECH während Aktivitäten im Vakuum des Alls.
+und COMTECH während Aktivitäten im Vakuum des Alls.#
 BEDROHLICH: Du besitzt eine furchteinflößende
 Ausstrahlung, die es dir leicht macht, andere einzuschüchtern.
 Indem du dein Gegenüber bedrohst, damit es
@@ -9,17 +9,17 @@ deinem Willen folgt, kannst du bei Würfen auf MANIPULATION
 als Attribut STÄRKE statt EMPATHIE verwenden. Bist
 du erfolgreich, darf dein Kontrahent im Gegenzug nichts
 von dir verlangen, kann sich aber immer noch dazu entscheiden,
-dich anzugreifen statt dir nachzugeben.
+dich anzugreifen statt dir nachzugeben.#
 BODYGUARD: Wird jemand in KURZER Entfernung
 zu dir von einem Angriff getroffen, kannst du dich zwischen
 den Angreifer und sein Ziel werfen, um die Attacke
 abzufangen (zählt nicht als Aktion). Würfele auf BEWEGLICHKEIT.
 Erzielst du mindestens ein , wirst du statt
 dem eigentlichen Ziel getroffen. Du kannst den Wurf
-strapazieren.
+strapazieren.#
 FLIEGENGEWICHT: Wenn du auf NAHKAMPF
 würfelst, um zu blocken, darfst du als Attribut GESCHICKLICHKEIT
-statt STÄRKE verwenden.
+statt STÄRKE verwenden.#
 GEHEIMVERSTECK: Du beginnst jede Spielsitzung
 mit einem zusätzlichen Gegenstand deiner Wahl, irgendwo
 an deiner Person versteckt oder an einem sicheren Ort
@@ -27,102 +27,100 @@ verstaut. Der Gegenstand muss etwas sein, das du sinnvollerweise
 besitzen könntest (die SL hat das letzte Wort).
 Wenn die SL einverstanden ist, darfst du auch bis zu einem
 dramatischen Moment der Sitzung warten, um dich auf
-einen Gegenstand festzulegen.
+einen Gegenstand festzulegen.#
 GUTE REFLEXE: Bei der Bestimmung der Initiative
 darfst du zwei Initiativekarten ziehen (statt einer).
 Behalte die, die du benutzen möchtest, und mische die
 andere zurück in den Stapel, bevor weitere Karten gezogen
-werden.
+werden.#
 HARTER SCHLAG: Du schlägst hart zu, aber nicht
 schnell. Du erhältst einen Modifikator von +2 auf NAHKAMPF,
-wenn du auf deine schnelle Aktion verzichtest.
+wenn du auf deine schnelle Aktion verzichtest.#
 HITZKÖPFIG: Du magst es nicht, wenn man dir sagt,
 was du tun oder lassen sollst. Du erhältst einen Modifikator
 von +2 bei vergleichenden Würfen auf MANIPULATION,
 wann immer jemand versucht, dir Befehle zu geben. Dieses
 Talent kann auch verwendet werden, um dem Berufstalent
-„Einberufen“ des Offiziers zu widerstehen.
+„Einberufen“ des Offiziers zu widerstehen.#
 KALTBLÜTIG: Du kannst einen Todesstoß ausführen,
 ohne auf EMPATHIE zu würfeln. Außerdem reduziert sich
 dein STRESSLEVEL jedes Mal um 1, wenn du einen Feind
-außer Gefecht setzt.
+außer Gefecht setzt.#
 KILLER: Du weißt genau, wo du einen Gegner treffen
 musst, damit er zu Boden geht und nicht mehr aufsteht.
 Erhält dein Feind eine kritische Verletzung, darfst du bei
 dem Ergebnis des W66 die Einer- und Zehnerstelle miteinander
 tauschen. Dieses Talent kann nur auf Menschen
-angewendet werden.
+angewendet werden.#
 KRAFTRESERVE: Wirst du außer Gefecht gesetzt,
 kommst du sofort wieder auf die Beine, ohne
 dass dir jemand Erste Hilfe leisten muss. Würfele auf
 AUSDAUER. Für jedes bekommst du 1 Gesundheitspunkt
 zurück. Dieses Talent kann nur einmal pro Phase
 verwendet werden und hat keinen Einfluss auf kritische
-Verletzungen.
+Verletzungen.#
 KURZSCHLÄFER: Du kommst mit weniger Schlaf aus
 als die meisten Menschen. Du brauchst nur alle zwei Tage
-(statt jeden Tag) für die Dauer von einer Schicht zu schlafen.
+(statt jeden Tag) für die Dauer von einer Schicht zu schlafen.#
 LEICHTER SCHRITT: Du erhältst einen Modifikator
 von +2 auf BEWEGLICHKEIT, wenn du die Fertigkeit
-verwendest, um dich unentdeckt zu bewegen.
+verwendest, um dich unentdeckt zu bewegen.#
 MENTOR: Einmal pro Phase darfst du die Fertigkeit BEFEHLIGEN
 einsetzen, um den STRESSLEVEL eines anderen
 Charakters zu reduzieren, der sich in KURZER Entfernung
 zu dir befindet. Für jedes sinkt der STRESSLEVEL um 1
 (zusätzlich zur normalen Erholung von Stress). Du kannst
-dieses Talent nicht auf dich selbst anwenden.
+dieses Talent nicht auf dich selbst anwenden.#
 MG-SCHÜTZE: Deiner Meinung nach gibt es nur
 eine Methode, um mit jeder Art von Bedrohung umzugehen:
 Dauerfeuer, bis sich nichts mehr bewegt. Wenn
 du einen vollautomatischen Feuerstoß abgibst, wird dein
-STRESSLEVEL nicht erhöht.
+STRESSLEVEL nicht erhöht.#
 NERVEN AUS STAHL: Gleichgültig, wie aussichtslos
 die Situation ist, du behältst einen kühlen Kopf.
-Du erhältst einen Modifikator von +2 auf alle Panikwürfe.
-78
-S P I E L E R T E I L
+Du erhältst einen Modifikator von +2 auf alle Panikwürfe.#
 PACKESEL: Du kannst doppelt so viele Gegenstände
-tragen wie gewöhnlich, bevor du als überlastet giltst.
+tragen wie gewöhnlich, bevor du als überlastet giltst.#
 RAUMSCHIFFKANONIER: Als Bordschütze
 auf einem Raumschiff bekommst du während des Weltraumkampfes
 einen Modifikator von +2 bei Würfen auf
-FERNKAMPF.
+Fernkampf.#
 RAUMSCHIFFKOMMANDEUR: Als Kapitän auf
 einem Raumschiff darfst du in einem Weltraumkampf bei
 der Bestimmung der Initiative zwei Initiativekarten ziehen
-(statt einer) und dir eine von beiden aussuchen.
+(statt einer) und dir eine von beiden aussuchen.#
 RAUMSCHIFFTECHNIKER: Du erhältst einen
 Modifikator von +2 bei Würfen auf SCHWERE MASCHINEN
 und COMTECH, wenn du Beschädigungen an einem Raumschiff
-reparierst.
+reparierst.#
 RUHIGER ATEM: Wenn du einen Versorgungswurf
 auf Luft ablegst, darfst du mit zwei Würfeln weniger würfeln,
 als dein Versorgungswert anzeigt (mindestens aber
-mit einem).
+mit einem).#
 SCHNELLFEUER: Du kannst eine Pistole oder ein
 Gewehr als schnelle Aktion abfeuern (statt als langsame),
-musst dann aber einen Modifikator von −2 hinnehmen.
+musst dann aber einen Modifikator von −2 hinnehmen.#
 SCHNELLE WUNDHEILUNG: Du besitzt
 gutes Heilfleisch und erholst dich schnell von deinen
 Verwundungen. Die Heilungsdauer von kritischen Verletzungen
-ist für dich halbiert.
+ist für dich halbiert.#
 SCHNELLES NACHLADEN: Du kannst eine
 Waffe mit einer schnellen Aktion nachladen (statt einer
-langsamen).
+langsamen).#
 SCHNELLES ZIEHEN: Du ziehst deine Waffe so
-schnell, dass es dich keine Aktion kostet.
-S C H W E R E LO S I G K E I T S T R A I N I N G :
+schnell, dass es dich keine Aktion kostet.#
+SCHWERELOSIGKEITSTRAINING:
 Dein Gleichgewichtssinn hat sich gut an das Fehlen
 von Gravitation angepasst. Du erhältst einen
 Modifikator von +2 bei Würfen auf BEWEGLICHKEIT in
-Schwerelosigkeit.
+Schwerelosigkeit.#
 STUR: Dein Wille ist eisern. Du kannst bei Würfen
 auf AUSDAUER als Attribut VERSTAND statt STÄRKE
-verwenden.
+verwenden.#
 WACHSAM: Deine Nackenhaare stellen sich auf,
 wenn Feinde in der Nähe umherschleichen. Du erhältst
 einen Modifikator von +2 auf WAHRNEHMUNG, um einen
-Überraschungsangriff zu bemerken.
+Überraschungsangriff zu bemerken.#
 WAFFENSPEZIALISIERUNG: Mit dieser Art
 Waffe kämpfst du schon so lange, dass du sie blind beherrschst.
 Suche dir ein Waffenmodell aus den Listen in
@@ -130,7 +128,7 @@ Kapitel 6 aus. Bei ihrer Verwendung erhältst du einen
 Modifikator von +2. Du kannst das Talent mehrfach
 wählen, bestimme dann jedes Mal ein neues Waffenmodell.
 Du kannst dich auch auf unbewaffnete Angriffe
-spezialisieren.
+spezialisieren.#
 WENIGESSER: Wenn du einen Versorgungswurf
 auf Nahrung ablegst, darfst du mit zwei Würfeln weniger
 würfeln, als dein Versorgungswert anzeigt (mindestens

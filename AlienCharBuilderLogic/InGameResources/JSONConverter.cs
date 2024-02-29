@@ -15,6 +15,8 @@ namespace AlienCharBuilderLogic.InGameResources
         {
             string jsonContent = JsonConvert.SerializeObject(data);
             File.WriteAllText(filePath, jsonContent);
+
+
         }
     }
 }
