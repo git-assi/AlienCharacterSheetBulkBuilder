@@ -198,7 +198,11 @@ namespace AlienCharBuilderLogic.Factory
                 {
                     if (attr is ComplexDataAttribute)
                     {
-                        ReadObjectProperties(prop.GetValue(dataObject), result, level);
+                        var data = prop.GetValue(dataObject);
+                        if (data != null)
+                        {
+                            ReadObjectProperties(data, result, level);
+                        }                        
                     }
                     if (attr is SheetnameAttribute)
                     {
