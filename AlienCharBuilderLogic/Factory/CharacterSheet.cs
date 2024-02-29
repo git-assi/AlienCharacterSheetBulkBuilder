@@ -76,24 +76,24 @@ namespace AlienCharBuilderLogic.Factory
             switch (career)
             {
                 case Career.Constants.PILOT:
-                    result.Add(WeaonFactory.CreateRevolver());
+                    result.Add(WeaponFactory.CreateRevolver());
                     break;
 
                 case Career.Constants.MARINE:
-                    result.Add(WeaonFactory.CreateAssaultRifle());
+                    result.Add(WeaponFactory.CreateAssaultRifle());
                     break;
 
                 case Career.Constants.HEAVY_GUNNER:
-                    result.Add(WeaonFactory.CreateSmartgun());
-                    result.Add(WeaonFactory.CreatePistol());
+                    result.Add(WeaponFactory.CreateSmartgun());
+                    result.Add(WeaponFactory.CreatePistol());
                     break;
 
                 case Career.Constants.TECH:
-                    result.Add(WeaonFactory.CreatePumpgun());
+                    result.Add(WeaponFactory.CreatePumpgun());
                     break;
 
                 default:
-                    result.Add(WeaonFactory.CreatePistol());
+                    result.Add(WepaonFactory.CreatePistol());
                     break;
             }                                   
             return result;
