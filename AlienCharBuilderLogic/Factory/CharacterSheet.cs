@@ -93,7 +93,7 @@ namespace AlienCharBuilderLogic.Factory
                     break;
 
                 default:
-                    result.Add(WepaonFactory.CreatePistol());
+                    result.Add(WeaponFactory.CreatePistol());
                     break;
             }                                   
             return result;
