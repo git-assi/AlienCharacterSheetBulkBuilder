@@ -42,7 +42,7 @@ namespace AlienCharBuilderLogic.Factory
             switch (career)
             {
                 case Constants.Career.PILOT:
-                    return Constants.Rank.LEUTNANT;                    
+                    return Constants.Rank.LIEUTENANT;                    
 
                 case Constants.Career.MARINE:
                     return Constants.Rank.PRIVATE;

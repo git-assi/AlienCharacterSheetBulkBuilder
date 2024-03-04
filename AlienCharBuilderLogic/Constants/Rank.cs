@@ -6,7 +6,7 @@
         public const string PRIVATE_FC = "Private first Class";
         public const string CORPORAL = "Corporal";
         public const string SERGANT = "Sergant";
-        public const string LEUTNANT = "Leutnant";
+        public const string LIEUTENANT = "Lieutenant";
         public const string SPECIALIST = "Specialist";        
     }
 }
