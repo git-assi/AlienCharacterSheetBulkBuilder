@@ -21,18 +21,23 @@ namespace AlienCharBuilderLogic.Factory
         //Fertigkeiten +1 Hauptfertigkeiten +3 bei Start
 
         public Character CreateCharacter(string career)
-        {            
+        {
+            return CreateCharacter(career, string.Empty);
+        }
+
+        public Character CreateCharacter(string career, string rankOverwrite)
+        {
             var newCharacter = new Character()
             {
-                Career = CareerResources.GetCareer(career),         
+                Career = CareerResources.GetCareer(career),
                 Conditions = new Conditions(),
                 Talent = GetRandomGenericTalent(),
                 TinyItems = new TinyItems(),
             };
 
-            newCharacter.Rank = newCharacter.Career.Baserank;            
+            newCharacter.Rank = rankOverwrite != string.Empty ? rankOverwrite: newCharacter.Career.Baserank;
 
-            (string name, string geschlecht) = GetNameUndGeschlecht();            
+            (string name, string geschlecht) = GetNameUndGeschlecht();
             newCharacter.Appearance = GetExtraInfo();
             newCharacter.Name = name;
             newCharacter.Geschlecht = geschlecht;
@@ -60,8 +65,8 @@ namespace AlienCharBuilderLogic.Factory
             int maxSumAttributes = 14;
             int maxSumSkills = 10;
 
-            newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);     
-            
+            newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
+
             newCharacter.Armor = GetRandomArmor();
             newCharacter.Talent = GetRandomGenericTalent();
             newCharacter.Gear = GetRandomGear();

@@ -20,10 +20,10 @@ namespace AlienCharBuilderLogic.Factory
         private Dictionary<string, Career> CreateResources()
         {
             var result = new Dictionary<string, Career>();
-            foreach (var item in Constants.Career.All) 
+            foreach (var item in Constants.Career.All)
             {
                 result.Add(item, CreateCareer(item));
-            }                       
+            }
             return result;
         }
 
@@ -42,21 +42,24 @@ namespace AlienCharBuilderLogic.Factory
             switch (career)
             {
                 case Constants.Career.PILOT:
-                    return Constants.Rank.LIEUTENANT;                    
+                    return Constants.Rank.LIEUTENANT;
 
                 case Constants.Career.MARINE:
                     return Constants.Rank.PRIVATE;
 
                 case Constants.Career.HEAVY_GUNNER:
-                    return Constants.Rank.PRIVATE_FC;                    
+                    return Constants.Rank.PRIVATE_FC;
 
                 case Constants.Career.TECH:
                 case Constants.Career.MEDIC:
-                    return Constants.Rank.SPECIALIST;                    
+                    return Constants.Rank.SPECIALIST;
+
+                case Constants.Career.WEAPONS_OFFICER:
+                    return Constants.Rank.WARRANT_OFFICER;
 
                 default:
-                    return Constants.Rank.PRIVATE;             
-            }            
+                    return Constants.Rank.PRIVATE;
+            }
         }
 
         internal static Career GetCareer(string career)
@@ -67,9 +70,9 @@ namespace AlienCharBuilderLogic.Factory
             }
             else
             {
-                return new Career() {Name = "huh?" };
+                return new Career() { Name = "huh?" };
             }
-            
+
         }
     }
 }

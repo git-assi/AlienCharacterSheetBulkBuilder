@@ -12,6 +12,7 @@ namespace AlienCharBuilderLogic
         {
 
             var fac = new CharacterFactory();
+            /*
 
             /*
             var data = new Dictionary<string, string>();
@@ -40,13 +41,13 @@ namespace AlienCharBuilderLogic
 
                     FirstSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE), Marine2 = fac.CreateCharacter(Constants.Career.MARINE) },
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE, Constants.Rank.SERGANT), Marine2 = fac.CreateCharacter(Constants.Career.MARINE) },
                         SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE), Marine2 = fac.CreateCharacter(Constants.Career.HEAVY_GUNNER) }
                     },
 
                     SecondSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE), Marine2 = fac.CreateCharacter(Constants.Career.MARINE) },
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE, Constants.Rank.PRIVATE_FC), Marine2 = fac.CreateCharacter(Constants.Career.MARINE) },
                         SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE), Marine2 = fac.CreateCharacter(Constants.Career.MEDIC) }
                     }
                 },
@@ -61,7 +62,7 @@ namespace AlienCharBuilderLogic
 
                     FirstSquad = new Squad()
                     {
-                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE), Marine2 = fac.CreateCharacter(Constants.Career.MARINE) },
+                        FirstTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE, Constants.Rank.CORPORAL), Marine2 = fac.CreateCharacter(Constants.Career.MARINE) },
                         SecondTeam = new Team() { Marine1 = fac.CreateCharacter(Constants.Career.MARINE), Marine2 = fac.CreateCharacter(Constants.Career.HEAVY_GUNNER) }
                     },
 
