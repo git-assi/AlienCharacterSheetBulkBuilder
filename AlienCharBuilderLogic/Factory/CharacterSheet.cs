@@ -1,7 +1,6 @@
 ﻿using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
 using AlienCharBuilderLogic.PropertyAttributes;
-using System.Collections.Generic;
 
 
 namespace AlienCharBuilderLogic.Factory
@@ -22,18 +21,21 @@ namespace AlienCharBuilderLogic.Factory
         //Fertigkeiten +1 Hauptfertigkeiten +3 bei Start
 
         public Character CreateCharacter(string career)
-        {
+        {            
             var newCharacter = new Character()
             {
+                Career = CareerResources.GetCareer(career),         
                 Conditions = new Conditions(),
                 Talent = GetRandomGenericTalent(),
                 TinyItems = new TinyItems(),
             };
 
-            (string name, string geschlecht) = GetNameUndGeschlecht();
+            newCharacter.Rank = newCharacter.Career.Baserank;            
+
+            (string name, string geschlecht) = GetNameUndGeschlecht();            
             newCharacter.Appearance = GetExtraInfo();
-            newCharacter.Name = name + $" ({geschlecht})";
-            newCharacter.Career = career;         
+            newCharacter.Name = name;
+            newCharacter.Geschlecht = geschlecht;
 
             newCharacter.Attributes.Wits.Value = randoIntAttribute(true);
             newCharacter.Attributes.Wits.Survival = randoIntSkill(true);
@@ -58,9 +60,10 @@ namespace AlienCharBuilderLogic.Factory
             int maxSumAttributes = 14;
             int maxSumSkills = 10;
 
+            newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);     
+            
             newCharacter.Armor = GetRandomArmor();
             newCharacter.Talent = GetRandomGenericTalent();
-            newCharacter.Weapons = GetWeapons(career);
             newCharacter.Gear = GetRandomGear();
 
             newCharacter.TinyItems.AddItem("Foto");
@@ -83,7 +86,7 @@ namespace AlienCharBuilderLogic.Factory
         {
             int max = isMainSkill ? 1 : 3;
             int skill = 2;
-            while (skill == 2) { RandomGen.Next(0, max); }
+            while (skill == 2) { skill = RandomGen.Next(0, max); }
             return skill;
         }
 
@@ -92,35 +95,7 @@ namespace AlienCharBuilderLogic.Factory
         {
             return GearResources.Generic;
         }
-        private List<Weapon> GetWeapons(string career)
-        {
-            var result = new List<Weapon>();
 
-            switch (career)
-            {
-                case Constants.Career.PILOT:
-                    result.Add(WeaponFactory.CreateRevolver());
-                    break;
-
-                case Constants.Career.MARINE:
-                    result.Add(WeaponFactory.CreateAssaultRifle());
-                    break;
-
-                case Constants.Career.HEAVY_GUNNER:
-                    result.Add(WeaponFactory.CreateSmartgun());
-                    result.Add(WeaponFactory.CreatePistol());
-                    break;
-
-                case Constants.Career.TECH:
-                    result.Add(WeaponFactory.CreatePumpgun());
-                    break;
-
-                default:
-                    result.Add(WeaponFactory.CreatePistol());
-                    break;
-            }                                   
-            return result;
-        }
 
         private Talent GetRandomGenericTalent()
         {
@@ -180,7 +155,10 @@ namespace AlienCharBuilderLogic.Factory
                 {
                     if (attr is WeightAttribute)
                     {
-                        result += (double)prop.GetValue(dataObject);
+                        if (prop.GetValue(dataObject) != null)
+                        {
+                            result += (double)prop.GetValue(dataObject);
+                        }
                         break;
                     }
                     if (attr is ComplexDataAttribute)
@@ -225,7 +203,7 @@ namespace AlienCharBuilderLogic.Factory
                         if (data != null)
                         {
                             ReadObjectProperties(data, result, level);
-                        }                        
+                        }
                     }
                     if (attr is SheetnameAttribute)
                     {

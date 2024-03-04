@@ -15,15 +15,17 @@ namespace AlienCharBuilderLogic
             var fac = new CharacterFactory();
 
 
-             /*var data = new Dictionary<string, string>();
-             fac.ReadObjectProperties(fac.CreateCharacter("Marine"), data, 0);
+            var data = new Dictionary<string, string>();
+            var foobar = fac.CreateCharacter(Constants.Career.HEAVY_GUNNER);            
+            fac.ReadObjectProperties(foobar, data, 0);
 
-             var path = WriteDataInPDF(data);
-             Process.Start(new ProcessStartInfo
-             {
-                 FileName = path,
-                 UseShellExecute = true
-             });*/
+            var path = WriteDataInPDF(data);
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = path,
+                UseShellExecute = true
+            });
+            return;
 
             var plt = new Platoon()
             {
@@ -31,7 +33,7 @@ namespace AlienCharBuilderLogic
                 SecondInCommand = new NPC(),
 
                 SectionA = new Section()
-                {                                     
+                {
                     APC = new GroundVehicle(),
                     VehicleDriver = fac.CreateCharacter(Constants.Career.DRIVER),
 
@@ -73,8 +75,8 @@ namespace AlienCharBuilderLogic
                 },
             };
 
-            
-            
+
+
             /*var data = new Dictionary<string, string>();
             fac.ReadObjectProperties(newChar, data);
             */

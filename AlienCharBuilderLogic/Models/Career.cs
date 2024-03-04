@@ -1,12 +1,15 @@
-﻿namespace AlienCharBuilderLogic.Models
+﻿using AlienCharBuilderLogic.PropertyAttributes;
+
+namespace AlienCharBuilderLogic.Models
 {
     public class Career
     {
-        public Career(string name)
-        {
-            Name = name;
-        }
+        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.CAREER)]
+        public string Name { get; set; } = string.Empty;
+
+        public string Baserank { get; set; } = string.Empty;
+
+        public List<Weapon> DefaultWeapons { get; set; } = new List<Weapon>();
     
-        public string Name { get; private set; } = string.Empty;
     }
 }

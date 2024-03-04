@@ -1,5 +1,4 @@
-﻿using AlienCharBuilderLogic.InGameResources;
-using AlienCharBuilderLogic.PropertyAttributes;
+﻿using AlienCharBuilderLogic.PropertyAttributes;
 
 namespace AlienCharBuilderLogic.Models
 {
@@ -19,10 +18,21 @@ namespace AlienCharBuilderLogic.Models
         public string Agenda { get; set; } = string.Empty;
 
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.NAME)]
-        public string Name { get; set; } = string.Empty;
+        public string SheetName
+        {
+            get
+            {
+                return $"{Rank} {Name} ({Geschlecht})";
+            }
+        }
 
-        [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.CAREER)]
-        public string Career { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Geschlecht { get; set; } = string.Empty;        
+
+        public string Rank { get; set; } = string.Empty;
+
+        [ComplexDataAttribute]
+        public required Career Career { get; set; }
 
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.BUDDY)]
         public string Buddy { get; set; } = string.Empty;
