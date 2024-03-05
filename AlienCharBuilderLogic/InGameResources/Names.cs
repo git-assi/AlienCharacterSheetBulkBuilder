@@ -4,7 +4,7 @@ namespace AlienCharBuilderLogic.InGameResources
     //https://donjon.bin.sh/alien/name/#type=alien_rpg_male
     public class Names
     {
-        public static List<string> Male = new List<string>()
+        public List<string> Male = new List<string>()
         {
             "Tolya Yevseyev",
             "Zayne Sarratt",
@@ -38,7 +38,7 @@ namespace AlienCharBuilderLogic.InGameResources
             "Jordan Vanlith"
         };
 
-        public static List<string> Female = new List<string>()
+        public List<string> Female = new List<string>()
         {
             "Lexi Edwards",
             "Lucy Howard",
@@ -72,17 +72,17 @@ namespace AlienCharBuilderLogic.InGameResources
             "Jetta Barick"
         };
 
-        public static List<string> ICC_Designations = new List<string>()
+        public List<string> ICC_Designations = new List<string>()
         {
             "GQ-557","RD-546","EW-461","GO-633","AU-352","WW-512","RK-626","IA-524","LP-595","ND-439"
         };
 
-        public static List<string> Planet_Names = new List<string>()
+        public List<string> Planet_Names = new List<string>()
         {
             "Hall's Rock","NE-534","Novaya Zarinsk","Linghai","LJ-472","New Edinburgh","New Cambridge","KB-633","Muspelheim","Dingxi"
         };
 
-        public static List<string> Star_Names = new List<string>()
+        public List<string> Star_Names = new List<string>()
         {
             "50 Cancri","Racine's Star","Wolf-5692","Centrich's Star","McRaven's Star","Luyten-5902","52 Vexilli","Frakes' Star","Groombridge-4864","Luyten-4679"
         };

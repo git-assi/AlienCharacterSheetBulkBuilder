@@ -124,6 +124,8 @@ namespace AlienCharBuilderLogic.Factory
             return (new Armors()).ArmorTypes[rando];
         }
 
+        private static Names _names = new Names();
+
         private (string, string) GetNameUndGeschlecht()
         {
             string name;
@@ -132,12 +134,12 @@ namespace AlienCharBuilderLogic.Factory
 
             if (RandomGen.Next(3) < 2)
             {
-                nameList = Names.Male;
+                nameList = _names.Male;
                 geschlecht = "Männlich";
             }
             else
             {
-                nameList = Names.Female;
+                nameList = _names.Female;
                 geschlecht = "Weiblich";
             }
             name = nameList[RandomGen.Next(nameList.Count - 1)];

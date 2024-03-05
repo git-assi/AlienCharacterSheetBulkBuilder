@@ -31,7 +31,7 @@ namespace TestUI
         {
             try
             {
-                JSONConverter.WriteObjectToJsonFile<List<string>>("Planet_Names.json", Names.Planet_Names);
+                
             }
             catch (Exception ex)
             {
@@ -57,9 +57,16 @@ namespace TestUI
                 }) ;
             }
 
-             pfad = "C:\\Temp\\Ergebnis.json";
+             pfad = "C:\\Temp\\AllgemeineTalente.json";
             JSONConverter.WriteObjectToJsonFile(pfad, generalTalents);
 
+        }
+
+        private void Button_json_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Names();
+            string pfad = "C:\\Temp\\Names.json";
+            JSONConverter.WriteObjectToJsonFile(pfad, x);
         }
     }
 }
