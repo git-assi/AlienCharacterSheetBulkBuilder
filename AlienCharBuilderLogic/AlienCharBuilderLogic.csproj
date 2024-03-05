@@ -37,7 +37,6 @@
 
   <ItemGroup>
     <Folder Include="InGameResources\Dump\" />
-    <Folder Include="InGameResources\Models\" />
   </ItemGroup>
 
 </Project>
