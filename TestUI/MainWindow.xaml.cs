@@ -44,7 +44,7 @@ namespace TestUI
             int i = 0;
             string pfad = @".\InGameResources\Dump\AllgemeineTalente.txt";
             List<string> talents = System.IO.File.ReadAllText(pfad).Replace(Environment.NewLine, " ").Replace("  ", " ").Trim().Split("#").ToList();
-            var generalTalents = new List<AlienCharBuilderLogic.Models.Talent>();
+            var generalTalents = new List<Talent>();
 
             foreach(var aktTalent in talents)
             {

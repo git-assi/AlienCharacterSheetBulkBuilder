@@ -1,5 +1,4 @@
 ﻿using AlienCharBuilderLogic.Factory;
-using AlienCharBuilderLogic.InGameResources.Models;
 using AlienCharBuilderLogic.Models;
 using iTextSharp.text.pdf;
 using System.Data;

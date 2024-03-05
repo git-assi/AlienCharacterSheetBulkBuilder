@@ -1,6 +1,4 @@
-﻿using AlienCharBuilderLogic.Models;
-
-namespace AlienCharBuilderLogic.InGameResources.Models
+﻿namespace AlienCharBuilderLogic.Models
 {
     public class Platoon
     {
@@ -11,7 +9,7 @@ namespace AlienCharBuilderLogic.InGameResources.Models
     }
 
     public class Section
-    {        
+    {
         public required AirVehicle Dropship { get; set; }
         public required FlightCrew Wing { get; set; }
         public required GroundVehicle APC { get; set; }

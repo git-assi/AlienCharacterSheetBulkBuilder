@@ -99,7 +99,7 @@ namespace AlienCharBuilderLogic.Factory
 
         private Talent GetRandomGenericTalent()
         {
-            return new Talent() { Category = Constants.Talent.GENERAL, Description = "Platzhalter" };
+            return new Talent() { Category = Constants.Talent.GENERAL, Description = "Platzhalter", Name = "RandomGenericTalent" };
         }
 
         private Armor GetRandomArmor()
