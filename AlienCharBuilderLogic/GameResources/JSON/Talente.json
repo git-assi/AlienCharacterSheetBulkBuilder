@@ -1,0 +1,249 @@
+[
+    {
+        "Category": "General",
+        "Name": "Aussenbordspezialist",
+        "Description": "Du hast schon viele Weltraumspaziergänge hinter dir. Du erhältst einen Modifikator von +2 bei Würfen auf SCHWERE MASCHINEN und COMTECH während Aktivitäten im Vakuum des Alls."
+    },
+    {
+        "Category": "General",
+        "Name": "Bedrohlich",
+        "Description": "Du besitzt eine furchteinflößende Ausstrahlung, die es dir leicht macht, andere einzuschüchtern. Indem du dein Gegenüber bedrohst, damit es deinem Willen folgt, kannst du bei Würfen auf MANIPULATION als Attribut STÄRKE statt EMPATHIE verwenden. Bist du erfolgreich, darf dein Kontrahent im Gegenzug nichts von dir verlangen, kann sich aber immer noch dazu entscheiden, dich anzugreifen statt dir nachzugeben."
+    },
+    {
+        "Category": "General",
+        "Name": "Bodyguard",
+        "Description": "Wird jemand in KURZER Entfernung zu dir von einem Angriff getroffen, kannst du dich zwischen den Angreifer und sein Ziel werfen, um die Attacke abzufangen (zählt nicht als Aktion). Würfele auf BEWEGLICHKEIT. Erzielst du mindestens ein , wirst du statt dem eigentlichen Ziel getroffen. Du kannst den Wurf strapazieren."
+    },
+    {
+        "Category": "General",
+        "Name": "Fliegengewicht",
+        "Description": "Wenn du auf NAHKAMPF würfelst, um zu blocken, darfst du als Attribut GESCHICKLICHKEIT statt STÄRKE verwenden."
+    },
+    {
+        "Category": "General",
+        "Name": "Geheimversteck",
+        "Description": "Du beginnst jede Spielsitzung mit einem zusätzlichen Gegenstand deiner Wahl, irgendwo an deiner Person versteckt oder an einem sicheren Ort verstaut. Der Gegenstand muss etwas sein, das du sinnvollerweise besitzen könntest (die SL hat das letzte Wort). Wenn die SL einverstanden ist, darfst du auch bis zu einem dramatischen Moment der Sitzung warten, um dich auf einen Gegenstand festzulegen."
+    },
+    {
+        "Category": "General",
+        "Name": "Gute reflexe",
+        "Description": "Bei der Bestimmung der Initiative darfst du zwei Initiativekarten ziehen (statt einer). Behalte die, die du benutzen möchtest, und mische die andere zurück in den Stapel, bevor weitere Karten gezogen werden."
+    },
+    {
+        "Category": "General",
+        "Name": "Harter schlag",
+        "Description": "Du schlägst hart zu, aber nicht schnell. Du erhältst einen Modifikator von +2 auf NAHKAMPF, wenn du auf deine schnelle Aktion verzichtest."
+    },
+    {
+        "Category": "General",
+        "Name": "Hitzköpfig",
+        "Description": "Du magst es nicht, wenn man dir sagt, was du tun oder lassen sollst. Du erhältst einen Modifikator von +2 bei vergleichenden Würfen auf MANIPULATION, wann immer jemand versucht, dir Befehle zu geben. Dieses Talent kann auch verwendet werden, um dem Berufstalent „Einberufen“ des Offiziers zu widerstehen."
+    },
+    {
+        "Category": "General",
+        "Name": "Kaltblütig",
+        "Description": "Du kannst einen Todesstoß ausführen, ohne auf EMPATHIE zu würfeln. Außerdem reduziert sich dein STRESSLEVEL jedes Mal um 1, wenn du einen Feind außer Gefecht setzt."
+    },
+    {
+        "Category": "General",
+        "Name": "Killer",
+        "Description": "Du weißt genau, wo du einen Gegner treffen musst, damit er zu Boden geht und nicht mehr aufsteht. Erhält dein Feind eine kritische Verletzung, darfst du bei dem Ergebnis des W66 die Einer- und Zehnerstelle miteinander tauschen. Dieses Talent kann nur auf Menschen angewendet werden."
+    },
+    {
+        "Category": "General",
+        "Name": "Kraftreserve",
+        "Description": "Wirst du außer Gefecht gesetzt, kommst du sofort wieder auf die Beine, ohne dass dir jemand Erste Hilfe leisten muss. Würfele auf AUSDAUER. Für jedes bekommst du 1 Gesundheitspunkt zurück. Dieses Talent kann nur einmal pro Phase verwendet werden und hat keinen Einfluss auf kritische Verletzungen."
+    },
+    {
+        "Category": "General",
+        "Name": "Kurzschläfer",
+        "Description": "Du kommst mit weniger Schlaf aus als die meisten Menschen. Du brauchst nur alle zwei Tage (statt jeden Tag) für die Dauer von einer Schicht zu schlafen."
+    },
+    {
+        "Category": "General",
+        "Name": "Leichter schritt",
+        "Description": "Du erhältst einen Modifikator von +2 auf BEWEGLICHKEIT, wenn du die Fertigkeit verwendest, um dich unentdeckt zu bewegen."
+    },
+    {
+        "Category": "General",
+        "Name": "Mentor",
+        "Description": "Einmal pro Phase darfst du die Fertigkeit BEFEHLIGEN einsetzen, um den STRESSLEVEL eines anderen Charakters zu reduzieren, der sich in KURZER Entfernung zu dir befindet. Für jedes sinkt der STRESSLEVEL um 1 (zusätzlich zur normalen Erholung von Stress). Du kannst dieses Talent nicht auf dich selbst anwenden."
+    },
+    {
+        "Category": "General",
+        "Name": "Mg-schütze",
+        "Description": "Deiner Meinung nach gibt es nur eine Methode, um mit jeder Art von Bedrohung umzugehen"
+    },
+    {
+        "Category": "General",
+        "Name": "Nerven aus stahl",
+        "Description": "Gleichgültig, wie aussichtslos die Situation ist, du behältst einen kühlen Kopf. Du erhältst einen Modifikator von +2 auf alle Panikwürfe."
+    },
+    {
+        "Category": "General",
+        "Name": "Packesel",
+        "Description": "Du kannst doppelt so viele Gegenstände tragen wie gewöhnlich, bevor du als überlastet giltst."
+    },
+    {
+        "Category": "General",
+        "Name": "Raumschiffkanonier",
+        "Description": "Als Bordschütze auf einem Raumschiff bekommst du während des Weltraumkampfes einen Modifikator von +2 bei Würfen auf Fernkampf."
+    },
+    {
+        "Category": "General",
+        "Name": "Raumschiffkommandeur",
+        "Description": "Als Kapitän auf einem Raumschiff darfst du in einem Weltraumkampf bei der Bestimmung der Initiative zwei Initiativekarten ziehen (statt einer) und dir eine von beiden aussuchen."
+    },
+    {
+        "Category": "General",
+        "Name": "Raumschifftechniker",
+        "Description": "Du erhältst einen Modifikator von +2 bei Würfen auf SCHWERE MASCHINEN und COMTECH, wenn du Beschädigungen an einem Raumschiff reparierst."
+    },
+    {
+        "Category": "General",
+        "Name": "Ruhiger atem",
+        "Description": "Wenn du einen Versorgungswurf auf Luft ablegst, darfst du mit zwei Würfeln weniger würfeln, als dein Versorgungswert anzeigt (mindestens aber mit einem)."
+    },
+    {
+        "Category": "General",
+        "Name": "Schnellfeuer",
+        "Description": "Du kannst eine Pistole oder ein Gewehr als schnelle Aktion abfeuern (statt als langsame), musst dann aber einen Modifikator von −2 hinnehmen."
+    },
+    {
+        "Category": "General",
+        "Name": "Schnelle wundheilung",
+        "Description": "Du besitzt gutes Heilfleisch und erholst dich schnell von deinen Verwundungen. Die Heilungsdauer von kritischen Verletzungen ist für dich halbiert."
+    },
+    {
+        "Category": "General",
+        "Name": "Schnelles nachladen",
+        "Description": "Du kannst eine Waffe mit einer schnellen Aktion nachladen (statt einer langsamen)."
+    },
+    {
+        "Category": "General",
+        "Name": "Schnelles ziehen",
+        "Description": "Du ziehst deine Waffe so schnell, dass es dich keine Aktion kostet."
+    },
+    {
+        "Category": "General",
+        "Name": "Schwerelosigkeitstraining",
+        "Description": "Dein Gleichgewichtssinn hat sich gut an das Fehlen von Gravitation angepasst. Du erhältst einen Modifikator von +2 bei Würfen auf BEWEGLICHKEIT in Schwerelosigkeit."
+    },
+    {
+        "Category": "General",
+        "Name": "Stur",
+        "Description": "Dein Wille ist eisern. Du kannst bei Würfen auf AUSDAUER als Attribut VERSTAND statt STÄRKE verwenden."
+    },
+    {
+        "Category": "General",
+        "Name": "Wachsam",
+        "Description": "Deine Nackenhaare stellen sich auf, wenn Feinde in der Nähe umherschleichen. Du erhältst einen Modifikator von +2 auf WAHRNEHMUNG, um einen Überraschungsangriff zu bemerken."
+    },
+    {
+        "Category": "General",
+        "Name": "Waffenspezialisierung",
+        "Description": "Mit dieser Art Waffe kämpfst du schon so lange, dass du sie blind beherrschst. Suche dir ein Waffenmodell aus den Listen in Kapitel 6 aus. Bei ihrer Verwendung erhältst du einen Modifikator von +2. Du kannst das Talent mehrfach wählen, bestimme dann jedes Mal ein neues Waffenmodell. Du kannst dich auch auf unbewaffnete Angriffe spezialisieren."
+    },
+    {
+        "Category": "General",
+        "Name": "Wenigesser",
+        "Description": "Wenn du einen Versorgungswurf auf Nahrung ablegst, darfst du mit zwei Würfeln weniger würfeln, als dein Versorgungswert anzeigt (mindestens aber mit einem). ZÄHER HUND"
+    },
+
+    {
+        "Category": "Medic",
+        "Name": "Beruhigende Präsenz",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Medic",
+        "Name": "Mitgefühl",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Medic",
+        "Name": "Feldarzt",
+        "Description": "ToDo"
+    },
+
+    {
+        "Category": "Marine",
+        "Name": "Harte Schale",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Marine",
+        "Name": "Overkill",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Marine",
+        "Name": "Über das Limit",
+        "Description": "ToDo"
+    },
+
+    {
+        "Category": "Heavy Gunner",
+        "Name": "Harte Schale",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Heavy Gunner",
+        "Name": "Overkill",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Heavy Gunner",
+        "Name": "Über das Limit",
+        "Description": "ToDo"
+    },
+
+    {
+        "Category": "Pilot",
+        "Name": "Vollgas",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Pilot",
+        "Name": "Waghalsig",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Pilot",
+        "Name": "Wie deine Westentasche",
+        "Description": "ToDo"
+    },
+
+    {
+        "Category": "Driver",
+        "Name": "Vollgas",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Driver",
+        "Name": "Waghalsig",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Driver",
+        "Name": "Wie deine Westentasche",
+        "Description": "ToDo"
+    },
+
+    {
+        "Category": "Tech",
+        "Name": "Widerstandsfähig",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Tech",
+        "Name": "Abgebrüht",
+        "Description": "ToDo"
+    },
+    {
+        "Category": "Tech",
+        "Name": "Wahrer Schneid",
+        "Description": "ToDo"
+    }
+
+]

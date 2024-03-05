@@ -1,5 +1,4 @@
-﻿
-using AlienCharBuilderLogic.Models;
+﻿using AlienCharBuilderLogic.Models;
 
 namespace AlienCharBuilderLogic.InGameResources
 {

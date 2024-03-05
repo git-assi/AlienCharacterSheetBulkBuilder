@@ -27,17 +27,15 @@
     <None Update="alienFFCharSheet.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="InGameResources\Dump\AllgemeineTalente.txt">
+    <None Update="GameResources\Dump\AllgemeineTalente.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GameResources\JSON\Talente.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="result.pdf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="InGameResources\Dump\" />
-    <Folder Include="InGameResources\JSON\" />
   </ItemGroup>
 
 </Project>

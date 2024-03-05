@@ -63,10 +63,13 @@ namespace TestUI
         }
 
         private void Button_json_Click(object sender, RoutedEventArgs e)
-        {
-            var x = new Names();
-            string pfad = "C:\\Temp\\Names.json";
-            JSONConverter.WriteObjectToJsonFile(pfad, x);
+        {            
+            string pfad = $"{AppDomain.CurrentDomain.BaseDirectory}\\GameResources\\JSON\\AllgemeineTalente.json";
+            var x = JSONConverter.ReadJsonFromFile<List<Talent>>(pfad);
+
+            var y = x.Where(t => t.Category == AlienCharBuilderLogic.Constants.Career.PILOT);
+
+            int xx = 1;
         }
     }
 }
