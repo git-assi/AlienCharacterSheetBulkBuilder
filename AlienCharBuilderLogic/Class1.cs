@@ -14,7 +14,7 @@ namespace AlienCharBuilderLogic
 
             var fac = new CharacterFactory();
 
-
+            /*
             var data = new Dictionary<string, string>();
             var foobar = fac.CreateCharacter(Constants.Career.HEAVY_GUNNER);            
             fac.ReadObjectProperties(foobar, data, 0);
@@ -24,8 +24,7 @@ namespace AlienCharBuilderLogic
             {
                 FileName = path,
                 UseShellExecute = true
-            });
-            return;
+            });*/           
 
             var plt = new Platoon()
             {

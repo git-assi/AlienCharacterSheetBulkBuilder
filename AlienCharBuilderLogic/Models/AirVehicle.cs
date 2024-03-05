@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace AlienCharBuilderLogic.Models
 {
-    public class AirVehicle
+    public class AirVehicle : Vehicle
     {
-        public string Name { get; set; } = string.Empty;
+        
     }
 }
