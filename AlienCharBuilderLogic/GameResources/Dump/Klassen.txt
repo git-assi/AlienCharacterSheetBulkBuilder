@@ -113,10 +113,8 @@ T skeptischer Blick
 Maschinist
 
 HAUPTATTRIBUT: Stärke
-T HAUPTFERTIGKEITEN: Schwere Maschinen,
-Ausdauer, Nahkampf
-T BERUFSTALENTE: Widerstandsfähig,
-Abgebrüht, Wahrer Schneid
+T HAUPTFERTIGKEITEN: Schwere Maschinen, Ausdauer, Nahkampf
+T BERUFSTALENTE: Widerstandsfähig, Abgebrüht, Wahrer Schneid
 
 AU S S E H E N
 Entscheide dich für eines oder mehrere der folgenden

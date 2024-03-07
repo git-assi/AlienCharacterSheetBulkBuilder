@@ -65,6 +65,8 @@ namespace AlienCharBuilderLogic.Factory
             int maxSumAttributes = 14;
             int maxSumSkills = 10;
 
+            Factory.AttributeFactory.SetCareerAttributeValues(newCharacter);
+
             newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
 
             newCharacter.Armor = GetRandomArmor();
@@ -263,9 +265,6 @@ namespace AlienCharBuilderLogic.Factory
             }
 
         }
-        public void FillCharakterSheet(Character character)
-        {
-
-        }
+     
     }
 }
