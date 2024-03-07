@@ -29,6 +29,9 @@
     <None Update="GameResources\Dump\AllgemeineTalente.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="GameResources\JSON\Names.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="GameResources\JSON\Talente.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -60,7 +60,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _closeCombat = value;
+                _closeCombat += value;
             }
         }
 
@@ -75,7 +75,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _stamina = value;
+                _stamina += value;
             }
         }
 
@@ -90,7 +90,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _heavyMachinery = value;
+                _heavyMachinery += value;
             }
         }
     }
@@ -112,7 +112,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _piloting = Value;
+                _piloting += Value;
             }
         }
 
@@ -127,11 +127,11 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _mobilty = Value;
+                _mobilty += Value;
             }
         }
 
-        private int _rangedCombat;
+        public int _rangedCombat;
         [MinMaxAttribute(Min = 0, Max = 5)]
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.RANGED_COMBAT)]
         public int RangedCombat
@@ -142,7 +142,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _rangedCombat = Value;
+                _rangedCombat += Value;
             }
         }
     }
@@ -164,7 +164,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _medicalAid = value;
+                _medicalAid += value;
             }
         }
 
@@ -179,7 +179,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _manipulation = value;
+                _manipulation += value;
             }
         }
 
@@ -194,7 +194,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {                
-                _command = value;
+                _command += value;
             }
         }
 
@@ -217,7 +217,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _observation = value;
+                _observation += value;
             }
         }
 
@@ -232,7 +232,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _survival = value;
+                _survival += value;
             }
         }
 
@@ -247,7 +247,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _comtech = Value;
+                _comtech += Value;
             }
         }
     }

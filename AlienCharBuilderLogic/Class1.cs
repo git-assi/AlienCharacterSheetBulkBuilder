@@ -15,20 +15,18 @@ namespace AlienCharBuilderLogic
         {
 
             var fac = new CharacterFactory();
-            
 
-            /*
-            var data = new Dictionary<string, string>();
-            var foobar = fac.CreateCharacter(Constants.Career.HEAVY_GUNNER);            
+           /* var data = new Dictionary<string, string>();
+            var foobar = fac.CreateCharacter(Constants.Career.MARINE);            
             fac.ReadObjectProperties(foobar, data, 0);
 
-            var path = WriteDataInPDF(data);
+            /*var path = WriteDataInPDF(data);
             Process.Start(new ProcessStartInfo
             {
                 FileName = path,
                 UseShellExecute = true
             });/**/
-            
+          
             var plt = new Platoon()
             {
                 Lieutenant = new NPC(),

@@ -1,6 +1,7 @@
 ﻿using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
 using AlienCharBuilderLogic.PropertyAttributes;
+using System.Diagnostics;
 
 
 namespace AlienCharBuilderLogic.Factory
@@ -47,10 +48,11 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Attributes.Wits.Comtech = randoIntSkill(true);
             newCharacter.Attributes.Wits.Observation = randoIntSkill(false);
 
-            newCharacter.Attributes.Agility.Value = randoIntAttribute(false);
+            newCharacter.Attributes.Agility.Value = randoIntDebugAttribute(true);
             newCharacter.Attributes.Agility.Piloting = randoIntSkill(false);
-            newCharacter.Attributes.Agility.RangedCombat = randoIntSkill(false);
+            newCharacter.Attributes.Agility.RangedCombat = randoIntDebugSkill(false);
             newCharacter.Attributes.Agility.Mobilty = randoIntSkill(false);
+            Debug.WriteLine("");
 
             newCharacter.Attributes.Strength.Value = randoIntAttribute(false);
             newCharacter.Attributes.Strength.HeavyMachinery = randoIntSkill(false);
@@ -86,7 +88,17 @@ namespace AlienCharBuilderLogic.Factory
         private int randoIntAttribute(bool isMainAttribute)
         {
             int max = isMainAttribute ? 5 : 4;
-            return RandomGen.Next(2, max);
+            int min = isMainAttribute ? 3 : 2;
+            return RandomGen.Next(min, max);
+        }
+
+        private int randoIntDebugAttribute(bool isMainAttribute)
+        {
+            int max = isMainAttribute ? 5 : 4;
+            int min = isMainAttribute ? 3 : 2;
+            int result = RandomGen.Next(min, max);
+            Debug.Write($"Attribute {result} ");
+            return result;
         }
 
         private int randoIntSkill(bool isMainSkill)
@@ -94,6 +106,15 @@ namespace AlienCharBuilderLogic.Factory
             int max = isMainSkill ? 1 : 3;
             int skill = 2;
             while (skill == 2) { skill = RandomGen.Next(0, max); }
+            return skill;
+        }
+
+        private int randoIntDebugSkill(bool isMainSkill)
+        {
+            int max = isMainSkill ? 1 : 3;
+            int skill = 2;
+            while (skill == 2) { skill = RandomGen.Next(0, max); }            
+            Debug.Write($"Skill {skill} ");          
             return skill;
         }
 
@@ -131,13 +152,24 @@ namespace AlienCharBuilderLogic.Factory
             return (new Armors()).ArmorTypes[rando];
         }
 
-        private static Names _names = new Names();
+        private static Names _names = null;
+
+        private void LoadNames()
+        {
+            string pfad = $"{AppDomain.CurrentDomain.BaseDirectory}\\GameResources\\JSON\\Names.json";
+            _names = JSONConverter.ReadJsonFromFile<Names>(pfad);
+        }
 
         private (string, string) GetNameUndGeschlecht()
         {
             string name;
             string geschlecht;
             List<string> nameList;
+
+            if (_names == null)
+            {
+                LoadNames();
+            }
 
             if (RandomGen.Next(3) < 2)
             {
