@@ -1,8 +1,11 @@
 ﻿using AlienCharBuilderLogic.Factory;
 using AlienCharBuilderLogic.Models;
-using iTextSharp.text.pdf;
+using iText.Forms.Fields;
+using iText.Forms;
+using iText.Kernel.Pdf;
 using System.Data;
 using System.Diagnostics;
+
 
 namespace AlienCharBuilderLogic
 {
@@ -12,9 +15,9 @@ namespace AlienCharBuilderLogic
         {
 
             var fac = new CharacterFactory();
-            /*
+            
 
-            /*
+            
             var data = new Dictionary<string, string>();
             var foobar = fac.CreateCharacter(Constants.Career.HEAVY_GUNNER);            
             fac.ReadObjectProperties(foobar, data, 0);
@@ -24,8 +27,8 @@ namespace AlienCharBuilderLogic
             {
                 FileName = path,
                 UseShellExecute = true
-            });*/           
-
+            });/**/
+            /*
             var plt = new Platoon()
             {
                 Lieutenant = new NPC(),
@@ -84,29 +87,29 @@ namespace AlienCharBuilderLogic
 
         private static string WriteDataInPDF(Dictionary<string, string> data)
         {
-            string path = $"{data["Name"]}.pdf";
-            using (FileStream outFile = new FileStream(path, FileMode.Create))
+            string src = "alienFFCharSheet.pdf";
+            string dest = $"{data["Name"]}.pdf";
+
+            PdfDocument pdf = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
+            PdfAcroForm form = PdfAcroForm.GetAcroForm(pdf, true);
+            IDictionary<string, PdfFormField> fields = form.GetAllFormFields();
+
+            foreach (var field in fields)
             {
-                PdfReader pdfReader = new PdfReader("alienFFCharSheet.pdf");
-                PdfStamper pdfStamper = new PdfStamper(pdfReader, outFile);
-                AcroFields fields = pdfStamper.AcroFields;
+                data["Stress1"] = "Yes";
+                data["Freezing"] = "Yes";
 
-                foreach (var field in fields.Fields)
+                if (data.ContainsKey(field.Key))
                 {
-                    data["Stress1"] = "Yes";
-                    data["Freezing"] = "Yes";
-
-                    if (data.ContainsKey(field.Key))
-                    {
-                        fields.SetField(field.Key, data[field.Key]);
-                    }
-
+                    PdfFormField toSet;
+                    fields.TryGetValue("name", out toSet);
+                    toSet.SetValue("Abhishek Kumar");
                 }
 
-                pdfStamper.Close();
-                pdfReader.Close();
+
+                pdf.Close();
             }
-            return path;
+            return dest;
         }
     }
 
