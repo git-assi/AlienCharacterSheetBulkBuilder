@@ -4,6 +4,8 @@ namespace AlienCharBuilderLogic.InGameResources
     //https://donjon.bin.sh/alien/name/#type=alien_rpg_male
     public class Names
     {
+        public bool Initialized { get; set; } = false;
+
         public List<string> Male = new List<string>();
 
         public List<string> Female = new List<string>();

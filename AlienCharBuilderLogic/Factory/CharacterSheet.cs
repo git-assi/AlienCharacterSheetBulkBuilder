@@ -152,12 +152,24 @@ namespace AlienCharBuilderLogic.Factory
             return (new Armors()).ArmorTypes[rando];
         }
 
-        private static Names _names = null;
+        private static Names _names = new Names();
+        private static Names AllNames 
+        { 
+            get
+            {
+                if (!_names.Initialized)
+                {
+                    LoadNames();
+                }
+                return _names;
+            }
+        }
 
-        private void LoadNames()
+        private static void LoadNames()
         {
             string pfad = $"{AppDomain.CurrentDomain.BaseDirectory}\\GameResources\\JSON\\Names.json";
             _names = JSONConverter.ReadJsonFromFile<Names>(pfad);
+            _names.Initialized = true;
         }
 
         private (string, string) GetNameUndGeschlecht()
@@ -165,11 +177,6 @@ namespace AlienCharBuilderLogic.Factory
             string name;
             string geschlecht;
             List<string> nameList;
-
-            if (_names == null)
-            {
-                LoadNames();
-            }
 
             if (RandomGen.Next(3) < 2)
             {
