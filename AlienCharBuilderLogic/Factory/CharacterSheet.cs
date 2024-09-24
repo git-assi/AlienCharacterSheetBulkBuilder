@@ -38,10 +38,11 @@ namespace AlienCharBuilderLogic.Factory
 
             newCharacter.Rank = rankOverwrite != string.Empty ? rankOverwrite: newCharacter.Career.Baserank;
 
-            (string name, string gender, byte[] profilePic) = GetNameAndGender();
+            (string name, string gender, string profilePic) = GetNameGenderAndPicture();
             newCharacter.Appearance = GetExtraInfo();
             newCharacter.Name = name;
             newCharacter.Geschlecht = gender;
+            newCharacter.ProfilePic = profilePic;
 
             newCharacter.Attributes.Wits.Value = randoIntAttribute(true);
             newCharacter.Attributes.Wits.Survival = randoIntSkill(true);
@@ -172,21 +173,21 @@ namespace AlienCharBuilderLogic.Factory
             _names.Initialized = true;
         }
 
-        private (string, string, byte[]) GetNameAndGender()
+        private (string, string, string) GetNameGenderAndPicture()
         {
             string name;
             string gender;
-            byte[] profilePicture;
+            string profilePicture = @$"{AppDomain.CurrentDomain.BaseDirectory}\GameResources\Images\Female\1.jpg";
 
             List<string> nameList;
             if (RandomGen.Next(3) < 2)
             {
-                nameList = _names.Male;
+                nameList = AllNames.Male;
                 gender = "Männlich";
             }
             else
             {
-                nameList = _names.Female;
+                nameList = AllNames.Female;
                 gender = "Weiblich";
             }
             name = nameList[RandomGen.Next(nameList.Count - 1)];

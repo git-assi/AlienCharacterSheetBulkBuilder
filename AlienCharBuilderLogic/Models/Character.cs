@@ -27,7 +27,11 @@ namespace AlienCharBuilderLogic.Models
         }
 
         public string Name { get; set; } = string.Empty;
-        public string Geschlecht { get; set; } = string.Empty;        
+        public string Geschlecht { get; set; } = string.Empty;
+
+        public string ProfilePic { get; set; } = string.Empty;
+
+        
 
         public string Rank { get; set; } = string.Empty;
 

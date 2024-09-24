@@ -85,30 +85,40 @@ namespace AlienCharBuilderLogic
             int xx = 1;
         }
 
-        private static string WriteDataInPDF(Dictionary<string, string> data)
+        public static string WriteDataInPDF(Dictionary<string, string> data)
         {
             string src = "alienFFCharSheet.pdf";
             string dest = $"{data["Name"]}.pdf";
 
-            PdfDocument pdf = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
-            PdfAcroForm form = PdfAcroForm.GetAcroForm(pdf, true);
-            IDictionary<string, PdfFormField> fields = form.GetAllFormFields();
-
-            foreach (var field in fields)
+            try
             {
-                data["Stress1"] = "Yes";
-                data["Freezing"] = "Yes";
+                PdfDocument pdf = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
+                PdfAcroForm form = PdfAcroForm.GetAcroForm(pdf, true);
+                IDictionary<string, PdfFormField> fields = form.GetAllFormFields();
 
-                if (data.ContainsKey(field.Key))
+                foreach (var field in fields)
                 {
-                    PdfFormField toSet;
-                    fields.TryGetValue("name", out toSet);
-                    toSet.SetValue("Abhishek Kumar");
+                    data["Stress1"] = "Yes";
+                    data["Freezing"] = "Yes";
+
+                    if (data.ContainsKey(field.Key))
+                    {
+                        PdfFormField toSet;
+                        fields.TryGetValue("name", out toSet);
+                        toSet?.SetValue("Abhishek Kumar");
+                    }
+
+
+                    pdf.Close();
                 }
-
-
-                pdf.Close();
             }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
+            
             return dest;
         }
     }

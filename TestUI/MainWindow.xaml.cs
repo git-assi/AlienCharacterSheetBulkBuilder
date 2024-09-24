@@ -1,7 +1,7 @@
 ﻿using AlienCharBuilderLogic;
 using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
-using Microsoft.VisualBasic;
+using PdfSharp.Pdf.IO;
 using System.Windows;
 
 namespace TestUI
@@ -80,7 +80,14 @@ namespace TestUI
                 var characterFactory = new AlienCharBuilderLogic.Factory.CharacterFactory();
                 var character = characterFactory.CreateCharacter(AlienCharBuilderLogic.Constants.Career.MARINE);
 
-                int i = 0;
+                var data = new Dictionary<string, string>();
+                characterFactory.ReadObjectProperties(character, data, 0);
+                var fileWithPath = PlatoonFactory.WriteDataInPDF(data);
+
+                var document = PdfReader.Open(fileWithPath, PdfDocumentOpenMode.Modify);
+                PDFEditor.InsertPicture(document, character.ProfilePic);
+
+
             }
             catch (Exception ex)
             {
