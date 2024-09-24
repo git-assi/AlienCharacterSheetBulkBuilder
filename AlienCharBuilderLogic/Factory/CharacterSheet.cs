@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace AlienCharBuilderLogic.Factory
 {
-    internal class CharacterFactory
+    public class CharacterFactory
     {
         private static readonly Random RandomGen = new();
 

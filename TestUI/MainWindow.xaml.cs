@@ -1,6 +1,7 @@
 ﻿using AlienCharBuilderLogic;
 using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
+using Microsoft.VisualBasic;
 using System.Windows;
 
 namespace TestUI
@@ -17,9 +18,14 @@ namespace TestUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            Class1.Narf();
-
+            try
+            {
+                PlatoonFactory.CreatePlatoon();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void Button_save_Click(object sender, RoutedEventArgs e)
@@ -65,6 +71,21 @@ namespace TestUI
             var y = x.Where(t => t.Category == AlienCharBuilderLogic.Constants.Career.PILOT);
 
             int xx = 1;
+        }
+
+        private void Button_Click_CreateSingleChar(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var characterFactory = new AlienCharBuilderLogic.Factory.CharacterFactory();
+                var character = characterFactory.CreateCharacter(AlienCharBuilderLogic.Constants.Career.MARINE);
+
+                int i = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

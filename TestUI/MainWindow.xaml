@@ -11,5 +11,6 @@
         <Button Click="Button_save_Click">Save Stuff</Button>
         <Button Click="Button_xml_Click">XML Stuff</Button>
         <Button Click="Button_json_Click">JSONStuff</Button>
+        <Button Click="Button_Click_CreateSingleChar">Create single Charakter</Button>
     </StackPanel>
 </Window>
