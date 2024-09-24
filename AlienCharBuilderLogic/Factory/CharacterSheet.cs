@@ -38,10 +38,10 @@ namespace AlienCharBuilderLogic.Factory
 
             newCharacter.Rank = rankOverwrite != string.Empty ? rankOverwrite: newCharacter.Career.Baserank;
 
-            (string name, string geschlecht) = GetNameUndGeschlecht();
+            (string name, string gender, byte[] profilePic) = GetNameAndGender();
             newCharacter.Appearance = GetExtraInfo();
             newCharacter.Name = name;
-            newCharacter.Geschlecht = geschlecht;
+            newCharacter.Geschlecht = gender;
 
             newCharacter.Attributes.Wits.Value = randoIntAttribute(true);
             newCharacter.Attributes.Wits.Survival = randoIntSkill(true);
@@ -172,26 +172,27 @@ namespace AlienCharBuilderLogic.Factory
             _names.Initialized = true;
         }
 
-        private (string, string) GetNameUndGeschlecht()
+        private (string, string, byte[]) GetNameAndGender()
         {
             string name;
-            string geschlecht;
-            List<string> nameList;
+            string gender;
+            byte[] profilePicture;
 
+            List<string> nameList;
             if (RandomGen.Next(3) < 2)
             {
                 nameList = _names.Male;
-                geschlecht = "Männlich";
+                gender = "Männlich";
             }
             else
             {
                 nameList = _names.Female;
-                geschlecht = "Weiblich";
+                gender = "Weiblich";
             }
             name = nameList[RandomGen.Next(nameList.Count - 1)];
             nameList.Remove(name);
 
-            return (name, geschlecht);
+            return (name, gender, profilePicture);
         }
 
         public double ReadObjectWeight(object dataObject)
