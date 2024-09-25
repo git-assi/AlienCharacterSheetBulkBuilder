@@ -29,6 +29,9 @@
     <None Update="alienFFCharSheet.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="blanko.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="GameResources\Dump\AllgemeineTalente.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

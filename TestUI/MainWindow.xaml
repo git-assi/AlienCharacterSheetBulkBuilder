@@ -12,5 +12,6 @@
         <Button Click="Button_xml_Click">XML Stuff</Button>
         <Button Click="Button_json_Click">JSONStuff</Button>
         <Button Click="Button_Click_CreateSingleChar">Create single Charakter</Button>
+        <Button Click="Button_Click_pdfTest">PDF Test</Button>
     </StackPanel>
 </Window>

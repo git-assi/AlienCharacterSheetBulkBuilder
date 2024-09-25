@@ -96,16 +96,30 @@ namespace AlienCharBuilderLogic
                 PdfAcroForm form = PdfAcroForm.GetAcroForm(pdf, true);
                 IDictionary<string, PdfFormField> fields = form.GetAllFormFields();
 
-                foreach (var field in fields)
-                {
-                    data["Stress1"] = "Yes";
-                    data["Freezing"] = "Yes";
+                data["Stress1"] = "Yes";
+                data["Freezing"] = "Yes";
 
+                foreach (var field in fields)
+                {                    
                     if (data.ContainsKey(field.Key))
-                    {
+                    {                        
                         PdfFormField toSet;
-                        fields.TryGetValue("name", out toSet);
-                        toSet?.SetValue("Abhishek Kumar");
+                        if (fields.TryGetValue(field.Key, out toSet))
+                        {
+                            var value = data[field.Key];
+                            try
+                            {
+                                toSet?.SetValue(value);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Exception " + field.Key);
+                            }                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Fail " + field.Key);
+                        }
                     }
 
 

@@ -2,6 +2,7 @@
 using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
 using PdfSharp.Pdf.IO;
+using System.Diagnostics;
 using System.Windows;
 
 namespace TestUI
@@ -84,10 +85,30 @@ namespace TestUI
                 characterFactory.ReadObjectProperties(character, data, 0);
                 var fileWithPath = PlatoonFactory.WriteDataInPDF(data);
 
-                var document = PdfReader.Open(fileWithPath, PdfDocumentOpenMode.Modify);
-                PDFEditor.InsertPicture(document, character.ProfilePic);
+               // var document = PdfReader.Open(fileWithPath, PdfDocumentOpenMode.Modify);
+                //PDFEditor.InsertPicture(document, character.ProfilePic);
 
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void Button_Click_pdfTest(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+
+                string fileWithPath = @$"{AppDomain.CurrentDomain.BaseDirectory}blanko.pdf";
+                string fileWithPath2 = @$"{AppDomain.CurrentDomain.BaseDirectory}blanko2.pdf";
+                string profilePicture = @$"{AppDomain.CurrentDomain.BaseDirectory}GameResources\Images\Female\1.jpg";
+
+                
+                PDFEditor.InsertPicture(fileWithPath, profilePicture);
+                
             }
             catch (Exception ex)
             {
