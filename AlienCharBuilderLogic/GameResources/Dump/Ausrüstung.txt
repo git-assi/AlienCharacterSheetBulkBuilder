@@ -106,13 +106,9 @@ Daihotai 8x8-Traktor 4 +0 2 6 4 17.000 $
 Weyland NR-9
 Geländewagen
 1 +2 2 2 2 3000 $
-M577 Gepanzerter
-Mannschaftstransporter
-13 +1 3 8 8 500.000 $
+M577 Gepanzerter Mannschaftstransporter 13 +1 3 8 8 500.000 $
 Aerodyne „Gyrocar“ 5 +3 3 4 3 40.000 $
-UD-4L „Cheyenne“
-Abwurfschiff
-15 +2 4 10 7 3.100.000 $
+UD-4L „Cheyenne“ Abwurfschiff 15 +2 4 10 7 3.100.000 $
 WY-37B „Cargo Lifter“
 Transportschlitten
 3
