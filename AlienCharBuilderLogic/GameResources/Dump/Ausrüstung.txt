@@ -27,15 +27,13 @@ UA 571-C Geschützturm +2 4 extrem – 12.000 $ Panzerbrechend, Vollautomatisch,
 
 Anzüge und Panzerungen
 SCHUTZKLEIDUNG PANZERUNG LUFT GEWICHT KOSTEN SPEZIAL
+
 Armat M3 Körperpanzerung 6 – 1 1200 $ –
-IRC Mk. 50
-Kompressionsanzug
-2 5 1 15.000 $ –
+IRC Mk. 50 Kompressionsanzug 2 5 1 15.000 $ –
 IRC Mk. 35 Druckanzug 5 4 2 2000 $ GESCHICKLICHKEIT −1
-Eco All-World Systems
-Überlebensanzug
-4 6 2 30.000 $ –
+Eco All-World Systems Überlebensanzug 4 6 2 30.000 $ –
 Weyland-Yutani APE-Anzug 3 4 1 5000 $ ÜBERLEBEN +3
+
 Caterpillar P-5000
 Laderoboter
 

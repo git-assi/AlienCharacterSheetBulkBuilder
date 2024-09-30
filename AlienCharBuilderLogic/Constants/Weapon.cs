@@ -2,6 +2,8 @@
 {
     public class Weapon
     {
+
+
         public class TYPE
         {
             public const string RIFLE = "Rifle";
@@ -31,4 +33,5 @@
             public const string EXPLOSION = "Explosion";
         }
     }
+    
 }
