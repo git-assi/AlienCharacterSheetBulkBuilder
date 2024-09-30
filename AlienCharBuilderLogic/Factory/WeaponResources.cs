@@ -73,15 +73,19 @@ namespace AlienCharBuilderLogic.Factory
                 {
                     new Weapon() {Name = "Revolver .357 Magnum", Bonus = "+1", Damage = 2, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 1, },
                     new Weapon() {Name = "Armat M4A3 Dienstpistole", Bonus = "+2", Damage = 1, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 0.5 },
+                    new Weapon() {Name = "Rexim RXF-M5 Außenbordpistole", Bonus = "+1", Damage = 1, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 0.5, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
                 }
 
                 },
                 {
                     Constants.Weapon.TYPE.HEAVY_WEAPON ,
                     new List<Weapon>()
-                {
-                    new Weapon() {Name = "M56A2 „Smartgun“", Bonus = "+3", Damage = 3, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 3, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
-                    new Weapon() {Name = "Armat M41A Impulsgewehr", Bonus = "+1", Damage = 2, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 1, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
+                {                    
+                    new Weapon() {Name = "Armat U1 Granatwerfer", Bonus = "+1", Damage = 2, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 0.5, Special = {Constants.Weapon.SPEZIAL.ANDERE_GRANATEN, Constants.Weapon.SPEZIAL.EXPLOSION } },
+                    new Weapon() {Name = "Armat M41A Impulsgewehr", Bonus = "-", Damage = 2, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 1, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
+                    new Weapon() {Name = "M56A2 „Smartgun", Bonus = "+3", Damage = 3, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 3, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
+                    new Weapon() {Name = "M240 Verbrennungseinheit", Bonus = "-", Damage = 2, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 1, Special = {Constants.Weapon.SPEZIAL.FEUERINTENSITÄT_9 } },
+                    new Weapon() {Name = "UA 571-C Geschützturm", Bonus = "+2", Damage = 4, Range = Constants.Weapon.REICHWEITE.EXTREM, Weight = 0, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND, Constants.Weapon.SPEZIAL.VOLL_AUTO, Constants.Weapon.SPEZIAL.FERNKAMPF_8} },
                 }
 
                 },

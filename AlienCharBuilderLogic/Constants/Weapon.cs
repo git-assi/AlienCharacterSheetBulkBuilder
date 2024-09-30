@@ -25,6 +25,10 @@
             public const string DOPPELTE_PANZERUNG = "Doppelte Panzerung";
             public const string EINSCHUESSIG = "einschüssig";
             public const string ENERGIE_5 = "Energie 5";
+            public const string FERNKAMPF_8 = "Fernkampf 8";
+            public const string FEUERINTENSITÄT_9 = "Feuerintensität 9";
+            public const string ANDERE_GRANATEN = "kann andere Granatentypen abfeuern";
+            public const string EXPLOSION = "Explosion";
         }
     }
 }
