@@ -18,22 +18,12 @@ SpaceSub ASSO-400 Harpunenkanone – 1 mittel 1 300 $ Doppelte Panzerung,Einsch�
 Armat XM99A Phasen-Plasma-Impulsgewehr – 4 extrem 2 20.000 $ Panzerbrechend, Energie 5
 
 Schwere Waffen
-WAFFE BONUS SCHADEN REICHWEITE GEWICHT KOSTEN SPEZIAL
-Armat U1 Granatwerfer +1 Explosion
-9
-weit 1/2 600 $ kann andere
-Granatentypen
-abfeuern
-Armat M41AE2 Schweres
-Impulsgewehr
-+1 3 extrem 2 1500 $ Panzerbrechend,
-Vollautomatisch
-M56A2 „Smartgun“ +3 3 weit 3 6000 $ Panzerbrechend,
-Vollautomatisch
-M240 Verbrennungseinheit – 2 mittel 1 500 $ Feuerintensität 9
-UA 571-C Geschützturm +2 4 extrem – 12.000 $ Panzerbrechend,
-Vollautomatisch,
-FERNKAMPF 8
+WAFFE				  BONUS SCHADEN		REICHWEITE GEWICHT KOSTEN SPEZIAL
+Armat U1 Granatwerfer +1	Explosion 9 weit		1/2 600 $ kann andere Granatentypen abfeuern
+Armat M41AE2 Schweres Impulsgewehr +1 3 extrem 2 1500 $ Panzerbrechend, Vollautomatisch 
+M56A2 „Smartgun“ +3 3 weit 3 6000 $ Panzerbrechend, Vollautomatisch 
+M240 Verbrennungseinheit – 2 mittel 1 500 $ Feuerintensität 9 
+UA 571-C Geschützturm +2 4 extrem – 12.000 $ Panzerbrechend, Vollautomatisch, FERNKAMPF 8
 
 Anzüge und Panzerungen
 SCHUTZKLEIDUNG PANZERUNG LUFT GEWICHT KOSTEN SPEZIAL

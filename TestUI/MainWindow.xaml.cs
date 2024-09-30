@@ -85,10 +85,11 @@ namespace TestUI
                 characterFactory.ReadObjectProperties(character, data, 0);
                 var fileWithPath = PlatoonFactory.WriteDataInPDF(data);
 
-               // var document = PdfReader.Open(fileWithPath, PdfDocumentOpenMode.Modify);
+                // var document = PdfReader.Open(fileWithPath, PdfDocumentOpenMode.Modify);
                 //PDFEditor.InsertPicture(document, character.ProfilePic);
-
-
+                string profilePicture = @$"{AppDomain.CurrentDomain.BaseDirectory}GameResources\Images\Female\1.jpg";
+                PDFEditor.InsertPicture(fileWithPath, profilePicture);
+               
             }
             catch (Exception ex)
             {
@@ -102,13 +103,14 @@ namespace TestUI
             {
 
 
-                string fileWithPath = @$"{AppDomain.CurrentDomain.BaseDirectory}blanko.pdf";
+                string fileWithPath = @$"{AppDomain.CurrentDomain.BaseDirectory}blanko22.pdf";
                 string fileWithPath2 = @$"{AppDomain.CurrentDomain.BaseDirectory}blanko2.pdf";
                 string profilePicture = @$"{AppDomain.CurrentDomain.BaseDirectory}GameResources\Images\Female\1.jpg";
 
-                
+                //PDFEditor.GeneratePDF(fileWithPath, profilePicture);
+                //PDFEditor.InsertPicture(fileWithPath, profilePicture);
                 PDFEditor.InsertPicture(fileWithPath, profilePicture);
-                
+
             }
             catch (Exception ex)
             {

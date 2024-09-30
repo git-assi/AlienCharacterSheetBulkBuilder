@@ -1,6 +1,7 @@
 ﻿using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
+using System.Diagnostics;
 
 namespace AlienCharBuilderLogic
 {
@@ -11,17 +12,17 @@ namespace AlienCharBuilderLogic
             var document = PdfReader.Open(fileWithPath, PdfDocumentOpenMode.Modify);
             var page = document.Pages[0];
 
-            using (XGraphics gfx = XGraphics.FromPdfPage(page, XGraphicsPdfPageOptions.Prepend))
-            {
-                int sigPosY = 100;
-                int sigPosX = 100;
-                using (var img = XImage.FromFile(pictureFile))
-                {
-                    gfx.DrawImage(img, sigPosX, sigPosY, 340, 340);
-                }
-            }
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            DrawImage(gfx, pictureFile, 700, 100, 75, 75);
+
             document.Save(fileWithPath);
 
+        }        
+
+        private static void DrawImage(XGraphics gfx, string jpegSamplePath, int x, int y, int width, int height)
+        {
+            XImage image = XImage.FromFile(jpegSamplePath);            
+            gfx.DrawImage(image, x, y, width, height);
         }
     }
 }

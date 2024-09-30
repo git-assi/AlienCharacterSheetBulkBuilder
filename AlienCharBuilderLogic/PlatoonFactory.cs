@@ -3,8 +3,6 @@ using AlienCharBuilderLogic.Models;
 using iText.Forms.Fields;
 using iText.Forms;
 using iText.Kernel.Pdf;
-using System.Data;
-using System.Diagnostics;
 
 
 namespace AlienCharBuilderLogic
@@ -87,8 +85,9 @@ namespace AlienCharBuilderLogic
 
         public static string WriteDataInPDF(Dictionary<string, string> data)
         {
-            string src = "alienFFCharSheet.pdf";
-            string dest = $"{data["Name"]}.pdf";
+
+            string src = @$"{AppDomain.CurrentDomain.BaseDirectory}alienFFCharSheet.pdf";
+            string dest = @$"{AppDomain.CurrentDomain.BaseDirectory}{data["Name"]}.pdf";
 
             try
             {
@@ -102,29 +101,13 @@ namespace AlienCharBuilderLogic
                 foreach (var field in fields)
                 {                    
                     if (data.ContainsKey(field.Key))
-                    {                        
-                        PdfFormField toSet;
-                        if (fields.TryGetValue(field.Key, out toSet))
-                        {
-                            var value = data[field.Key];
-                            try
-                            {
-                                toSet?.SetValue(value);
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine("Exception " + field.Key);
-                            }                            
-                        }
-                        else
-                        {
-                            Console.WriteLine("Fail " + field.Key);
-                        }
-                    }
-
-
-                    pdf.Close();
+                    {                       
+                        fields[field.Key].SetValue(data[field.Key]);                    
+                    }                    
                 }
+
+                pdf.Close();                             
+
             }
             catch (Exception ex)
             {
