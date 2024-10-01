@@ -28,7 +28,7 @@ namespace AlienCharBuilderLogic.Factory
             switch (career)
             {
                 case Constants.Career.PILOT:
-                    defaultWeapons.Add(AllWeapons[Constants.Weapon.TYPE.HANDGUN][0]);
+                    defaultWeapons.Add(GetRandomHandgun());
                     break;
 
                 case Constants.Career.MARINE:
@@ -37,7 +37,7 @@ namespace AlienCharBuilderLogic.Factory
 
                 case Constants.Career.HEAVY_GUNNER:
                     defaultWeapons.Add(AllWeapons[Constants.Weapon.TYPE.HEAVY_WEAPON][0]);
-                    defaultWeapons.Add(AllWeapons[Constants.Weapon.TYPE.HANDGUN][0]);
+                    defaultWeapons.Add(GetRandomHandgun());
                     break;
 
                 case Constants.Career.TECH:
@@ -45,10 +45,19 @@ namespace AlienCharBuilderLogic.Factory
                     break;
 
                 default:
-                    defaultWeapons.Add(AllWeapons[Constants.Weapon.TYPE.HANDGUN][1]);
+                    defaultWeapons.Add(GetRandomHandgun());
                     break;
             }           
             return defaultWeapons;
+        }
+
+        private static readonly Random RandomGen = new();
+        private static Weapon GetRandomHandgun()
+        {            
+            int max = AllWeapons[Constants.Weapon.TYPE.HANDGUN].Count - 1;
+            int min = 0;
+            int result = RandomGen.Next(min, max);
+            return AllWeapons[Constants.Weapon.TYPE.HANDGUN][result];
         }
 
         public Dictionary<string, List<Weapon>> CreateWeaponResources()
