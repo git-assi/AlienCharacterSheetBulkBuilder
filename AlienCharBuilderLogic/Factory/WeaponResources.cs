@@ -65,6 +65,7 @@ namespace AlienCharBuilderLogic.Factory
                     new Weapon() {Name = "Armat M37A2 Pumpgun Kaliber 12", Bonus = "+2", Damage = 3, Range = Constants.Weapon.REICHWEITE.KURZ, Weight = 1, Special = {Constants.Weapon.SPEZIAL.DOPPELTE_PANZERUNG } },
                     new Weapon() {Name = "SpaceSub ASSO-400 Harpunenkanone", Bonus = "-", Damage = 1, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 1, Special = {Constants.Weapon.SPEZIAL.EINSCHUESSIG } },
                     new Weapon() {Name = "Armat XM99A Phasen-Plasma-Impulsgewehr", Bonus = "-", Damage = 4, Range = Constants.Weapon.REICHWEITE.EXTREM, Weight = 2, Special = {Constants.Weapon.SPEZIAL.EINSCHUESSIG  } },
+                    new Weapon() {Name = "Armat M39 Submachine Gun", Bonus = "-1", Damage = 2, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 1, Special = {Constants.Weapon.SPEZIAL.VOLL_AUTO  } },
                 }
                 },
                 {
@@ -74,6 +75,7 @@ namespace AlienCharBuilderLogic.Factory
                     new Weapon() {Name = "Revolver .357 Magnum", Bonus = "+1", Damage = 2, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 1, },
                     new Weapon() {Name = "Armat M4A3 Dienstpistole", Bonus = "+2", Damage = 1, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 0.5 },
                     new Weapon() {Name = "Rexim RXF-M5 Außenbordpistole", Bonus = "+1", Damage = 1, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 0.5, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
+                    new Weapon() {Name = "Heckler & Koch VP78 Pistol", Bonus = "+1", Damage = 1, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 0.5, Special = {Constants.Weapon.SPEZIAL.BURST_PLUS_EINS, Constants.Weapon.SPEZIAL.VOLL_AUTO } },
                 }
 
                 },

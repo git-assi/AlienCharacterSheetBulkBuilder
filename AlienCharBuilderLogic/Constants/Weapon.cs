@@ -24,6 +24,7 @@
         {
             public const string VOLL_AUTO = "vollautomatisch";
             public const string PANZERBRECHEND = "panzerbrechend";
+            public const string BURST_PLUS_EINS = "Burst: +1 Bonus und Damage";
             public const string DOPPELTE_PANZERUNG = "Doppelte Panzerung";
             public const string EINSCHUESSIG = "einschüssig";
             public const string ENERGIE_5 = "Energie 5";
