@@ -9,5 +9,7 @@ namespace AlienCharBuilderLogic.Models
         public int Geschwindigkeit { get; set; } = 0;
         public int Rumpf {  get; set; } = 0;    
         public int Panzerung { get; set; } = 0;
+
+        public List<string> Special { get; set; } = new List<string>() { string.Empty };
     }
 }

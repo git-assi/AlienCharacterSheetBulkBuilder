@@ -15,5 +15,10 @@ namespace AlienCharBuilderLogic.Models
         [WeightAttribute()]
         public double Weight { get; set; } = 0;
         public List<string> Special { get; set; } = new List<string>() { string.Empty };
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} {Name}";
+        }
     }
 }
