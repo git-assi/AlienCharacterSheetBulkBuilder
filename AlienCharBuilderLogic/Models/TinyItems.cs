@@ -5,20 +5,12 @@ namespace AlienCharBuilderLogic.Models
     public class TinyItem
     {
         public string Name { get; set; } = string.Empty;
-        public int count { get; set; } = 0;
+        public int Anzahl { get; set; } = 0;
     }
 
 
     public class TinyItems
-    {
-        public static TinyItem NewTinyItem(string name)
-        {
-
-            return new TinyItem() { Name = name, count = 1 };
-
-        }
-
-
+    {      
         [SheetnameAttribute(Sheetname = "Tiny items")]
         public string Items
         {
@@ -27,7 +19,7 @@ namespace AlienCharBuilderLogic.Models
                 string result = "";
                 foreach (var item in _items)
                 {
-                    int anzahl = item.count;
+                    int anzahl = item.Anzahl;
 
                     result += item.Name + (anzahl > 1 ? " x " + anzahl.ToString() : "") + Environment.NewLine;
                 }
@@ -39,15 +31,14 @@ namespace AlienCharBuilderLogic.Models
         private List<TinyItem> _items { get; set; } = new List<TinyItem>();
 
         public void AddItem(string name)
-        {
-            var item = TinyItems.NewTinyItem(name);
-            if (!_items.Any(i => i.Name == item.Name))
-            {
-                _items.Add(item);
+        {            
+            if (!_items.Any(i => i.Name == name))
+            {                
+                _items.Add(new TinyItem() { Name = name, Anzahl = 1 });
             }
             else
             {
-                _items.First(i => i.Name == name).count++;
+                _items.First(i => i.Name == name).Anzahl++;
             }
 
         }
