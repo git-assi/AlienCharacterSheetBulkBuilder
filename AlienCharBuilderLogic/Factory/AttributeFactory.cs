@@ -1,12 +1,13 @@
 ﻿using AlienCharBuilderLogic.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+
 namespace AlienCharBuilderLogic.Factory
 {
     internal static class AttributeFactory
     {
+        //int maxSumAttributes = 14;
+        //int maxSumSkills = 10;
+
         private static readonly Random RandomGen = new();
 
         internal static void SetCareerAttributeValues(Character newCharacter)
