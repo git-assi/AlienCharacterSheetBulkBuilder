@@ -30,7 +30,7 @@ namespace AlienCharBuilderLogic.Factory
         {
             var newCharacter = new Character()
             {
-                Career = CareerResources.GetCareer(career),
+                Career = FactoryFloor.Careers.GetCareer(career),
                 Conditions = new Conditions(),
                 Talent = GetRandomGenericTalent(),
                 TinyItems = new TinyItems(),
@@ -38,7 +38,7 @@ namespace AlienCharBuilderLogic.Factory
 
             newCharacter.Rank = rankOverwrite != string.Empty ? rankOverwrite: newCharacter.Career.Baserank;
 
-            (string name, string gender, string profilePic) = GetNameGenderAndPicture();
+            (string name, string gender, string profilePic) = FactoryFloor.Names.GetNameGenderAndPicture();
             newCharacter.Appearance = GetExtraInfo();
             newCharacter.Name = name;
             newCharacter.Geschlecht = gender;
@@ -70,11 +70,11 @@ namespace AlienCharBuilderLogic.Factory
 
             newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
 
-            newCharacter.Armor = GetRandomArmor();
+            newCharacter.Armor = FactoryFloor.Armours.GetRandomArmor(RandomGen.Next(10));
             newCharacter.Talent = GetRandomGenericTalent();
-            newCharacter.Gear = GetRandomGear();
+            newCharacter.Gear = FactoryFloor.Gears.GetRandomGear();
 
-            newCharacter.TinyItems = TinyItemsFactory.CreateRandomTinyItems(5);
+            newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems(5);
             
             newCharacter.Conditions.Encumbrance = ReadObjectWeight(newCharacter).ToString("F2");
 
@@ -114,10 +114,7 @@ namespace AlienCharBuilderLogic.Factory
         }
 
 
-        private List<Gear> GetRandomGear()
-        {
-            return GearResources.Generic;
-        }
+        
 
 
         private Talent GetRandomGenericTalent()
@@ -125,70 +122,8 @@ namespace AlienCharBuilderLogic.Factory
             return new Talent() { Category = Constants.Talent.GENERAL, Description = "Platzhalter", Name = "RandomGenericTalent" };
         }
 
-        private Armor GetRandomArmor()
-        {
-            int rando = RandomGen.Next(10);
-            if (rando == 10)
-            {
-                rando = 3;
-            }
-            else if (rando >= 8)
-            {
-                rando = 2;
-            }
-            else if (rando == 7)
-            {
-                rando = 1;
-            }
-            else
-            {
-                rando = 0;
-            }
-            return (new Armors()).ArmorTypes[rando];
-        }
 
-        private static Names _names = new Names();
-        private static Names AllNames 
-        { 
-            get
-            {
-                if (!_names.Initialized)
-                {
-                    LoadNames();
-                }
-                return _names;
-            }
-        }
-
-        private static void LoadNames()
-        {
-            string pfad = $"{AppDomain.CurrentDomain.BaseDirectory}\\GameResources\\JSON\\Names.json";
-            _names = JSONConverter.ReadJsonFromFile<Names>(pfad);
-            _names.Initialized = true;
-        }
-
-        private (string, string, string) GetNameGenderAndPicture()
-        {
-            string name;
-            string gender;
-            string profilePicture = @$"{AppDomain.CurrentDomain.BaseDirectory}\GameResources\Images\Female\1.jpg";
-
-            List<string> nameList;
-            if (RandomGen.Next(3) < 2)
-            {
-                nameList = AllNames.Male;
-                gender = "Männlich";
-            }
-            else
-            {
-                nameList = AllNames.Female;
-                gender = "Weiblich";
-            }
-            name = nameList[RandomGen.Next(nameList.Count - 1)];
-            nameList.Remove(name);
-
-            return (name, gender, profilePicture);
-        }
+      
 
         public double ReadObjectWeight(object dataObject)
         {
@@ -294,7 +229,7 @@ namespace AlienCharBuilderLogic.Factory
                     }
                     wert = wertAsInt;
                 }
-                result.Add(sheetName, wert is null ? "" : wert.ToString());
+                result.Add(sheetName, value: wert is not null ? wert.ToString() : "");
 
 
             }

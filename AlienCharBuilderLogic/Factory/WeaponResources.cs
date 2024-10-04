@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AlienCharBuilderLogic.Models;
+﻿using AlienCharBuilderLogic.Models;
 
 namespace AlienCharBuilderLogic.Factory
 {
     public class WeaponResources
     {
-        private static Dictionary<string, List<Weapon>> _allWeapons = new Dictionary<string, List<Weapon>>();
-        public static Dictionary<string, List<Weapon>> AllWeapons
+        private const string PFAD = @$".\GameResources\JSON\WeaponResources.json";
+
+        private Dictionary<string, List<Weapon>> _allWeapons = new Dictionary<string, List<Weapon>>();
+        public Dictionary<string, List<Weapon>> AllWeapons
         {
             get
             {
@@ -22,7 +19,7 @@ namespace AlienCharBuilderLogic.Factory
             }
         }
 
-        internal static List<Weapon> GetDefaultWeaponsForCareer(string career)
+        internal List<Weapon> GetDefaultWeaponsForCareer(string career)
         {
             var defaultWeapons = new List<Weapon>();
             switch (career)
@@ -47,13 +44,13 @@ namespace AlienCharBuilderLogic.Factory
                 default:
                     defaultWeapons.Add(GetRandomHandgun());
                     break;
-            }           
+            }
             return defaultWeapons;
         }
 
         private static readonly Random RandomGen = new();
-        private static Weapon GetRandomHandgun()
-        {            
+        private Weapon GetRandomHandgun()
+        {
             int max = AllWeapons[Constants.Weapon.TYPE.HANDGUN].Count - 1;
             int min = 0;
             int result = RandomGen.Next(min, max);
@@ -91,7 +88,7 @@ namespace AlienCharBuilderLogic.Factory
                 {
                     Constants.Weapon.TYPE.HEAVY_WEAPON ,
                     new List<Weapon>()
-                {                    
+                {
                     new Weapon() {Name = "Armat U1 Granatwerfer", Bonus = "+1", Damage = 2, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 0.5, Special = {Constants.Weapon.SPEZIAL.ANDERE_GRANATEN, Constants.Weapon.SPEZIAL.EXPLOSION } },
                     new Weapon() {Name = "Armat M41A Impulsgewehr", Bonus = "-", Damage = 2, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 1, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
                     new Weapon() {Name = "M56A2 „Smartgun", Bonus = "+3", Damage = 3, Range = Constants.Weapon.REICHWEITE.WEIT, Weight = 3, Special = {Constants.Weapon.SPEZIAL.PANZERBRECHEND } },
@@ -102,5 +99,18 @@ namespace AlienCharBuilderLogic.Factory
                 },
             };
         }
+
+
+        public Dictionary<string, List<Weapon>> LoadWeaponResources()
+        {
+            var x = InGameResources.JSONConverter.ReadJsonFromFile<Dictionary<string, List<Weapon>>>(PFAD);
+            return x;
+        }
+
+        public void SaveWeaponResources(Dictionary<string, List<Weapon>> weapons)
+        {
+            InGameResources.JSONConverter.WriteObjectToJsonFile(PFAD, weapons);
+        }
+
     }
 }

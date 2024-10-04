@@ -5,7 +5,7 @@ namespace AlienCharBuilderLogic.Factory
 {
     public class TinyItemsFactory
     {
-        public static TinyItems CreateRandomTinyItems(int anzahl)
+        public TinyItems CreateRandomTinyItems(int anzahl)
         {
             var result = new TinyItems();
 

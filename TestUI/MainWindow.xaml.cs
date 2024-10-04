@@ -1,4 +1,5 @@
 ﻿using AlienCharBuilderLogic;
+using AlienCharBuilderLogic.Factory;
 using AlienCharBuilderLogic.InGameResources;
 using AlienCharBuilderLogic.Models;
 using PdfSharp.Pdf.IO;
@@ -44,7 +45,7 @@ namespace TestUI
         private void Button_xml_Click(object sender, RoutedEventArgs e)
         {
             int i = 0;
-            string pfad = @".\InGameResources\Dump\AllgemeineTalente.txt";
+            string pfad = @".\GameResources\Dump\AllgemeineTalente.txt";
             List<string> talents = System.IO.File.ReadAllText(pfad).Replace(Environment.NewLine, " ").Replace("  ", " ").Trim().Split("#").ToList();
             var generalTalents = new List<Talent>();
 
@@ -111,6 +112,20 @@ namespace TestUI
                 //PDFEditor.InsertPicture(fileWithPath, profilePicture);
                 PDFEditor.InsertPicture(fileWithPath, profilePicture);
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void Button_xml_waffen_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var x = new WeaponResources();
+                x.CreateWeaponResources();
+                x.SaveWeaponResources(x.AllWeapons);
             }
             catch (Exception ex)
             {

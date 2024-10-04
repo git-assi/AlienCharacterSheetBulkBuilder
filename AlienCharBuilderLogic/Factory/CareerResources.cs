@@ -4,8 +4,8 @@ namespace AlienCharBuilderLogic.Factory
 {
     public class CareerResources
     {
-        private static Dictionary<string, Career> _allCareers = new Dictionary<string, Career>();
-        public static Dictionary<string, Career> AllCareers
+        private Dictionary<string, Career> _allCareers = new Dictionary<string, Career>();
+        public Dictionary<string, Career> AllCareers
         {
             get
             {
@@ -27,13 +27,15 @@ namespace AlienCharBuilderLogic.Factory
             return result;
         }
 
+        private WeaponResources _weaponResources = new WeaponResources();
+
         private Career CreateCareer(string name)
         {
             return new Career()
             {
                 Name = name,
                 Baserank = GetDefaultRankForCareer(name),
-                DefaultWeapons = WeaponResources.GetDefaultWeaponsForCareer(name),
+                DefaultWeapons = _weaponResources.GetDefaultWeaponsForCareer(name),
             };
         }
 
@@ -62,7 +64,7 @@ namespace AlienCharBuilderLogic.Factory
             }
         }
 
-        internal static Career GetCareer(string career)
+        internal Career GetCareer(string career)
         {
             if (AllCareers.ContainsKey(career))
             {
