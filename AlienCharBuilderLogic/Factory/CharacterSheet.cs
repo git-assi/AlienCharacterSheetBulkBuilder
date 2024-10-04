@@ -1,5 +1,4 @@
-﻿using AlienCharBuilderLogic.InGameResources;
-using AlienCharBuilderLogic.Models;
+﻿using AlienCharBuilderLogic.Models;
 using AlienCharBuilderLogic.PropertyAttributes;
 using System.Diagnostics;
 
@@ -32,7 +31,7 @@ namespace AlienCharBuilderLogic.Factory
             {
                 Career = FactoryFloor.Careers.GetCareer(career),
                 Conditions = new Conditions(),
-                Talent = GetRandomGenericTalent(),
+                Talent = FactoryFloor.GenericTalents.GetRandomGenericTalent(),
                 TinyItems = new TinyItems(),
             };
 
@@ -71,7 +70,7 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
 
             newCharacter.Armor = FactoryFloor.Armours.GetRandomArmor(RandomGen.Next(10));
-            newCharacter.Talent = GetRandomGenericTalent();
+            newCharacter.Talent = FactoryFloor.GenericTalents.GetRandomGenericTalent();
             newCharacter.Gear = FactoryFloor.Gears.GetRandomGear();
 
             newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems(5);
@@ -112,18 +111,6 @@ namespace AlienCharBuilderLogic.Factory
             Debug.Write($"Skill {skill} ");          
             return skill;
         }
-
-
-        
-
-
-        private Talent GetRandomGenericTalent()
-        {
-            return new Talent() { Category = Constants.Talent.GENERAL, Description = "Platzhalter", Name = "RandomGenericTalent" };
-        }
-
-
-      
 
         public double ReadObjectWeight(object dataObject)
         {
