@@ -9,7 +9,7 @@ namespace AlienCharBuilderLogic
 {
     public class PlatoonFactory
     {
-        public static void CreatePlatoon()
+        public Platoon CreatePlatoon()
         {
 
             var characterFactory = new CharacterFactory();
@@ -29,6 +29,7 @@ namespace AlienCharBuilderLogic
 
             var plt = new Platoon()
             {
+                Name = "285 Light Infantry",
                 Lieutenant = new NPC(),
                 SecondInCommand = new NPC(),
 
@@ -38,37 +39,37 @@ namespace AlienCharBuilderLogic
                     VehicleDriver = characterFactory.CreateCharacter(Constants.Career.DRIVER),
 
                     Dropship = AirVehiclesFactory.AllAirVehicles[Constants.AirVehicles.TYPE.CHEYENNE],
-                    Wing = new FlightCrew() 
-                    { 
-                        Pilot = characterFactory.CreateCharacter(Constants.Career.PILOT), 
-                        WeaponOfficer = characterFactory.CreateCharacter(Constants.Career.WEAPONS_OFFICER), 
+                    Wing = new FlightCrew()
+                    {
+                        Pilot = characterFactory.CreateCharacter(Constants.Career.PILOT),
+                        WeaponOfficer = characterFactory.CreateCharacter(Constants.Career.WEAPONS_OFFICER),
                     },
 
                     FirstSquad = new Squad()
                     {
-                        FirstTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.SERGANT), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE) 
+                        FirstTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.SERGANT),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE)
                         },
-                        SecondTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.HEAVY_GUNNER) 
+                        SecondTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.HEAVY_GUNNER)
                         }
                     },
 
                     SecondSquad = new Squad()
                     {
-                        FirstTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.PRIVATE_FC), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE) 
+                        FirstTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.PRIVATE_FC),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE)
                         },
-                        SecondTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MEDIC) 
+                        SecondTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MEDIC)
                         }
                     }
                 },
@@ -79,43 +80,43 @@ namespace AlienCharBuilderLogic
                     VehicleDriver = characterFactory.CreateCharacter(Constants.Career.DRIVER),
 
                     Dropship = AirVehiclesFactory.AllAirVehicles[Constants.AirVehicles.TYPE.BLACKFLY],
-                    Wing = new FlightCrew() 
-                    { 
-                        Pilot = characterFactory.CreateCharacter(Constants.Career.PILOT), 
-                        WeaponOfficer = characterFactory.CreateCharacter(Constants.Career.WEAPONS_OFFICER), 
+                    Wing = new FlightCrew()
+                    {
+                        Pilot = characterFactory.CreateCharacter(Constants.Career.PILOT),
+                        WeaponOfficer = characterFactory.CreateCharacter(Constants.Career.WEAPONS_OFFICER),
                     },
 
                     FirstSquad = new Squad()
                     {
-                        FirstTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.CORPORAL), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE) 
+                        FirstTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.CORPORAL),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE)
                         },
-                        SecondTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.HEAVY_GUNNER) 
+                        SecondTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.HEAVY_GUNNER)
                         }
                     },
 
                     SecondSquad = new Squad()
                     {
-                        FirstTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE) 
+                        FirstTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE)
                         },
-                        SecondTeam = new Team() 
-                        { 
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE), 
-                            Marine2 = characterFactory.CreateCharacter(Constants.Career.TECH) 
+                        SecondTeam = new Team()
+                        {
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE),
+                            Marine2 = characterFactory.CreateCharacter(Constants.Career.TECH)
                         }
                     }
                 },
             };
 
-
+            return plt;
 
             /*var data = new Dictionary<string, string>();
             fac.ReadObjectProperties(newChar, data);
@@ -139,14 +140,14 @@ namespace AlienCharBuilderLogic
                 data["Freezing"] = "Yes";
 
                 foreach (var field in fields)
-                {                    
+                {
                     if (data.ContainsKey(field.Key))
-                    {                       
-                        fields[field.Key].SetValue(data[field.Key]);                    
-                    }                    
+                    {
+                        fields[field.Key].SetValue(data[field.Key]);
+                    }
                 }
 
-                pdf.Close();                             
+                pdf.Close();
 
             }
             catch (Exception ex)
@@ -154,9 +155,25 @@ namespace AlienCharBuilderLogic
 
                 throw;
             }
-            
-            
+
+
             return dest;
+        }
+
+        private string PFAD(string name)
+        {
+             return @$".\GameResources\JSON\Platoon_{name.Replace(" ", "_")}.json"; 
+        }
+
+        public Platoon LoadPlatoon(string name)
+        {
+            var x = InGameResources.JSONConverter.ReadJsonFromFile<Platoon>(PFAD(name));
+            return x;
+        }
+
+        public void SavePlatoon(Platoon platoon)
+        {
+            InGameResources.JSONConverter.WriteObjectToJsonFile(PFAD(platoon.Name), platoon);
         }
     }
 

@@ -20,9 +20,7 @@ namespace AlienCharBuilderLogic.Factory
                     tmp = RandomGen.Next(1, 4);
                     newCharacter.Attributes.Strength.Stamina = tmp;                    
                     tmp = RandomGen.Next(1, 4);                    
-                    Debug.Write($"{newCharacter.Name} RangedCombat: {newCharacter.Attributes.Agility.Value} {newCharacter.Attributes.Agility._rangedCombat} {tmp} = ");
                     newCharacter.Attributes.Agility.RangedCombat = tmp;
-                    Debug.WriteLine(newCharacter.Attributes.Agility.RangedCombat);
                     break;
 
                 case Constants.Career.PILOT:

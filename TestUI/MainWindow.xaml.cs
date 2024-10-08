@@ -22,7 +22,9 @@ namespace TestUI
         {
             try
             {
-                PlatoonFactory.CreatePlatoon();
+                var pf = new PlatoonFactory();
+                var plt = pf.CreatePlatoon();
+                pf.SavePlatoon(plt);
             }
             catch (Exception ex)
             {

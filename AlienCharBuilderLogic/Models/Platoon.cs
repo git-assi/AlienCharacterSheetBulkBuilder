@@ -2,6 +2,8 @@
 {
     public class Platoon
     {
+     
+        public string Name { get; set; } = string.Empty;
         public required NPC Lieutenant { get; set; }
         public required NPC SecondInCommand { get; set; }
         public required Section SectionA { get; set; }

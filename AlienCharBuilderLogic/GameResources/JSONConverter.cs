@@ -13,7 +13,7 @@ namespace AlienCharBuilderLogic.InGameResources
 
         public static void WriteObjectToJsonFile<T>(string filePath, T data)
         {
-            string jsonContent = JsonConvert.SerializeObject(data);
+            string jsonContent = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(filePath, jsonContent);
 
 

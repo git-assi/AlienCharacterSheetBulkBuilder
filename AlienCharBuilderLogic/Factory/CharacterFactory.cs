@@ -43,14 +43,14 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Geschlecht = gender;
             newCharacter.ProfilePic = profilePic;
 
-            newCharacter.Attributes.Wits.Value = randoIntAttribute(true);
+            newCharacter.Attributes.Wits.Value = randoIntAttribute(false);
             newCharacter.Attributes.Wits.Survival = randoIntSkill(true);
             newCharacter.Attributes.Wits.Comtech = randoIntSkill(true);
             newCharacter.Attributes.Wits.Observation = randoIntSkill(false);
 
-            newCharacter.Attributes.Agility.Value = randoIntDebugAttribute(true);
+            newCharacter.Attributes.Agility.Value = randoIntAttribute(true);
             newCharacter.Attributes.Agility.Piloting = randoIntSkill(false);
-            newCharacter.Attributes.Agility.RangedCombat = randoIntDebugSkill(false);
+            newCharacter.Attributes.Agility.RangedCombat = randoIntSkill(false);
             newCharacter.Attributes.Agility.Mobilty = randoIntSkill(false);
             Debug.WriteLine("");
 
@@ -73,20 +73,18 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Talent = FactoryFloor.GenericTalents.GetRandomGenericTalent();
             newCharacter.Gear = FactoryFloor.Gears.GetRandomGear();
 
+            Debug.WriteLine($"");
             newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems(5);
             
             newCharacter.Conditions.Encumbrance = ReadObjectWeight(newCharacter).ToString("F2");
 
+            
+            Debug.WriteLine($"AttributesSum {newCharacter.Attributes.AttributesSum}");
+
             return newCharacter;
         }
+        
         private int randoIntAttribute(bool isMainAttribute)
-        {
-            int max = isMainAttribute ? 5 : 4;
-            int min = isMainAttribute ? 3 : 2;
-            return RandomGen.Next(min, max);
-        }
-
-        private int randoIntDebugAttribute(bool isMainAttribute)
         {
             int max = isMainAttribute ? 5 : 4;
             int min = isMainAttribute ? 3 : 2;
@@ -95,15 +93,8 @@ namespace AlienCharBuilderLogic.Factory
             return result;
         }
 
+      
         private int randoIntSkill(bool isMainSkill)
-        {
-            int max = isMainSkill ? 1 : 3;
-            int skill = 2;
-            while (skill == 2) { skill = RandomGen.Next(0, max); }
-            return skill;
-        }
-
-        private int randoIntDebugSkill(bool isMainSkill)
         {
             int max = isMainSkill ? 1 : 3;
             int skill = 2;

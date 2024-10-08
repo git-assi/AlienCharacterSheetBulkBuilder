@@ -1,5 +1,4 @@
 ﻿using AlienCharBuilderLogic.PropertyAttributes;
-using AlienCharBuilderLogic.Constants;
 
 
 //StartAttribute in Summe 14
@@ -48,7 +47,7 @@ namespace AlienCharBuilderLogic.Models
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.STRENGTH)]
         [MinMaxAttribute(Min = 2, Max = 4)]
         public int Value { get; set; }
-
+        
         private int _closeCombat;
         [MinMaxAttribute(Min = 0, Max = 5)]
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.CLOSE_COMBAT)]
@@ -131,7 +130,7 @@ namespace AlienCharBuilderLogic.Models
             }
         }
 
-        public int _rangedCombat;
+        private int _rangedCombat;
         [MinMaxAttribute(Min = 0, Max = 5)]
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.RANGED_COMBAT)]
         public int RangedCombat
