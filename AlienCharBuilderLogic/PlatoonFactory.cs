@@ -49,7 +49,7 @@ namespace AlienCharBuilderLogic
                     {
                         FirstTeam = new Team()
                         {
-                            Marine1 = characterFactory.CreateCharacter(Constants.Career.MARINE, Constants.Rank.SERGANT),
+                            Marine1 = characterFactory.CreateCharacter(Constants.Career.SERGANT),
                             Marine2 = characterFactory.CreateCharacter(Constants.Career.MARINE)
                         },
                         SecondTeam = new Team()

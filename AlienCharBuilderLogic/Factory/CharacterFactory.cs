@@ -35,7 +35,7 @@ namespace AlienCharBuilderLogic.Factory
                 TinyItems = new TinyItems(),
             };
 
-            newCharacter.Rank = rankOverwrite != string.Empty ? rankOverwrite: newCharacter.Career.Baserank;
+            newCharacter.Rank = rankOverwrite != string.Empty ? rankOverwrite : newCharacter.Career.Baserank;
 
             (string name, string gender, string profilePic) = FactoryFloor.Names.GetNameGenderAndPicture();
             newCharacter.Appearance = GetExtraInfo();
@@ -43,29 +43,30 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Geschlecht = gender;
             newCharacter.ProfilePic = profilePic;
 
-            newCharacter.Attributes.Wits.Value = randoIntAttribute(false);
-            newCharacter.Attributes.Wits.Survival = randoIntSkill(true);
-            newCharacter.Attributes.Wits.Comtech = randoIntSkill(true);
-            newCharacter.Attributes.Wits.Observation = randoIntSkill(false);
+            //Attribute min 2 und max 4(5)
+            //Fertigkeiten 0-5 neben +1 main +1-3
 
-            newCharacter.Attributes.Agility.Value = randoIntAttribute(true);
-            newCharacter.Attributes.Agility.Piloting = randoIntSkill(false);
-            newCharacter.Attributes.Agility.RangedCombat = randoIntSkill(false);
-            newCharacter.Attributes.Agility.Mobilty = randoIntSkill(false);
-            Debug.WriteLine("");
+            var caf = new CareerAttributeFactory(newCharacter.Career.Name);
 
-            newCharacter.Attributes.Strength.Value = randoIntAttribute(false);
-            newCharacter.Attributes.Strength.HeavyMachinery = randoIntSkill(false);
-            newCharacter.Attributes.Strength.Stamina = randoIntSkill(false);
-            newCharacter.Attributes.Strength.CloseCombat = randoIntSkill(false);
+            newCharacter.Attributes.Wits.Value = randoIntAttribute(caf.Wits);
+            newCharacter.Attributes.Wits.Survival = randoIntSkill(caf.Survival);
+            newCharacter.Attributes.Wits.Comtech = randoIntSkill(caf.Comtech);
+            newCharacter.Attributes.Wits.Observation = randoIntSkill(caf.Observation);
 
-            newCharacter.Attributes.Empathy.Value = randoIntAttribute(false);
-            newCharacter.Attributes.Empathy.Manipulation = randoIntSkill(false);
-            newCharacter.Attributes.Empathy.MedicalAid = randoIntSkill(false);
-            newCharacter.Attributes.Empathy.Command = randoIntSkill(false);
+            newCharacter.Attributes.Agility.Value = randoIntAttribute(caf.Agility);
+            newCharacter.Attributes.Agility.Piloting = randoIntSkill(caf.Piloting);
+            newCharacter.Attributes.Agility.RangedCombat = randoIntSkill(caf.RangedCombat);
+            newCharacter.Attributes.Agility.Mobilty = randoIntSkill(caf.Mobilty);
 
-            
-            AttributeFactory.SetCareerAttributeValues(newCharacter);
+            newCharacter.Attributes.Strength.Value = randoIntAttribute(caf.Strength);
+            newCharacter.Attributes.Strength.HeavyMachinery = randoIntSkill(caf.HeavyMachinery);
+            newCharacter.Attributes.Strength.Stamina = randoIntSkill(caf.Stamina);
+            newCharacter.Attributes.Strength.CloseCombat = randoIntSkill(caf.CloseCombat);
+
+            newCharacter.Attributes.Empathy.Value = randoIntAttribute(caf.Empathy);
+            newCharacter.Attributes.Empathy.Manipulation = randoIntSkill(caf.Manipulation);
+            newCharacter.Attributes.Empathy.MedicalAid = randoIntSkill(caf.MedicalAid);
+            newCharacter.Attributes.Empathy.Command = randoIntSkill(caf.Command);
 
             newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
 
@@ -75,31 +76,29 @@ namespace AlienCharBuilderLogic.Factory
 
             Debug.WriteLine($"");
             newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems(5);
-            
+
             newCharacter.Conditions.Encumbrance = ReadObjectWeight(newCharacter).ToString("F2");
 
-            
+
             Debug.WriteLine($"AttributesSum {newCharacter.Attributes.AttributesSum}");
 
             return newCharacter;
         }
-        
+
         private int randoIntAttribute(bool isMainAttribute)
         {
             int max = isMainAttribute ? 5 : 4;
             int min = isMainAttribute ? 3 : 2;
             int result = RandomGen.Next(min, max);
-            Debug.Write($"Attribute {result} ");
             return result;
         }
 
-      
+
         private int randoIntSkill(bool isMainSkill)
         {
             int max = isMainSkill ? 1 : 3;
             int skill = 2;
-            while (skill == 2) { skill = RandomGen.Next(0, max); }            
-            Debug.Write($"Skill {skill} ");          
+            while (skill == 2) { skill = RandomGen.Next(0, max); }
             return skill;
         }
 
@@ -213,6 +212,6 @@ namespace AlienCharBuilderLogic.Factory
             }
 
         }
-     
+
     }
 }

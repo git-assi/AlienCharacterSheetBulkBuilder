@@ -25,10 +25,12 @@ namespace AlienCharBuilderLogic.Factory
             switch (career)
             {
                 case Constants.Career.PILOT:
+                case Constants.Career.OFFICER:
                     defaultWeapons.Add(GetRandomHandgun());
                     break;
 
                 case Constants.Career.MARINE:
+                case Constants.Career.SERGANT:
                     defaultWeapons.Add(AllWeapons[Constants.Weapon.TYPE.RIFLE][0]);
                     break;
 

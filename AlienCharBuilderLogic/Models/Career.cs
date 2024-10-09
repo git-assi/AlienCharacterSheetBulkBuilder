@@ -11,7 +11,6 @@ namespace AlienCharBuilderLogic.Models
         public string Baserank { get; set; } = string.Empty;
 
         public List<Weapon> DefaultWeapons { get; set; } = new List<Weapon>();
-
         
     }
 }

@@ -38,11 +38,8 @@ namespace AlienCharBuilderLogic.Models
         [ComplexDataAttribute]
         public Empathy Empathy { get; set; } = new Empathy();
     }
-    public interface ISkill
-    {
 
-    }
-    public class Strength : ISkill
+    public class Strength
     {
         [SheetnameAttribute(Sheetname = Constants.PropertyAttributes.STRENGTH)]
         [MinMaxAttribute(Min = 2, Max = 4)]

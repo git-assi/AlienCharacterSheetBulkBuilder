@@ -5,7 +5,7 @@
         //mieser, fieser Hack wird besser gemacht
         public static List<string> All = new List<string>()
         {
-            DRIVER, MARINE, TECH , HEAVY_GUNNER, MEDIC,PILOT ,WEAPONS_OFFICER
+            DRIVER, MARINE, TECH , HEAVY_GUNNER, MEDIC,PILOT ,WEAPONS_OFFICER, OFFICER, SERGANT
         };
 
         public const string DRIVER = "Driver";
@@ -15,5 +15,7 @@
         public const string MEDIC = "Medic";
         public const string PILOT = "Pilot";
         public const string WEAPONS_OFFICER = "Weapon systems officer";
+        public const string OFFICER = "Officer";
+        public const string SERGANT = "Sergant";
     }
 }
