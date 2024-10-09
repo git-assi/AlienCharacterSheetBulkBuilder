@@ -72,10 +72,10 @@ namespace AlienCharBuilderLogic.Factory
 
             newCharacter.Armor = FactoryFloor.Armours.GetRandomArmor(RandomGen.Next(10));
             newCharacter.Talent = FactoryFloor.GenericTalents.GetRandomGenericTalent();
-            newCharacter.Gear = FactoryFloor.Gears.GetRandomGear();
+            newCharacter.Gear = FactoryFloor.Gears.GetRandomGear(newCharacter.Career.Name);
 
             Debug.WriteLine($"");
-            newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems(5);
+            newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems();
 
             newCharacter.Conditions.Encumbrance = ReadObjectWeight(newCharacter).ToString("F2");
 

@@ -22,7 +22,7 @@ namespace AlienCharBuilderLogic.Models
         {
             get
             {
-                return 0;// Strength.SkillSum + Agility.SkillSum + Wits.SkillSum + Empathy.SkillSum;
+                return Strength.SkillSum + Agility.SkillSum + Wits.SkillSum + Empathy.SkillSum;
             }
         }
 
@@ -56,7 +56,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _closeCombat += value;
+                _closeCombat = value;
             }
         }
 
@@ -71,7 +71,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _stamina += value;
+                _stamina = value;
             }
         }
 
@@ -86,7 +86,14 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _heavyMachinery += value;
+                _heavyMachinery = value;
+            }
+        }
+        public int SkillSum
+        {
+            get
+            {
+                return _closeCombat + _heavyMachinery + _stamina;
             }
         }
     }
@@ -108,7 +115,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _piloting += Value;
+                _piloting = Value;
             }
         }
 
@@ -123,7 +130,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _mobilty += Value;
+                _mobilty = Value;
             }
         }
 
@@ -138,7 +145,14 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _rangedCombat += Value;
+                _rangedCombat = Value;
+            }
+        }
+        public int SkillSum
+        {
+            get
+            {
+                return _piloting +_mobilty + _rangedCombat;
             }
         }
     }
@@ -160,7 +174,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _medicalAid += value;
+                _medicalAid = value;
             }
         }
 
@@ -175,7 +189,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _manipulation += value;
+                _manipulation = value;
             }
         }
 
@@ -190,7 +204,15 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {                
-                _command += value;
+                _command = value;
+            }
+        }
+
+        public int SkillSum
+        {
+            get
+            {
+                return _medicalAid + _manipulation + _command;
             }
         }
 
@@ -213,7 +235,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _observation += value;
+                _observation = value;
             }
         }
 
@@ -228,7 +250,7 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _survival += value;
+                _survival = value;
             }
         }
 
@@ -243,7 +265,15 @@ namespace AlienCharBuilderLogic.Models
             }
             set
             {
-                _comtech += Value;
+                _comtech = Value;
+            }
+        }
+
+        public int SkillSum
+        {
+            get
+            {
+                return _comtech + _survival + _observation;
             }
         }
     }
