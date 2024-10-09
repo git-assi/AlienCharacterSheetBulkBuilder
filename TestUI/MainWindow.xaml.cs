@@ -134,5 +134,20 @@ namespace TestUI
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void Button_Click_loadPlatoon(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var x = new PlatoonFactory();
+                var y = x.LoadPlatoon("285 Light Infantry");
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }

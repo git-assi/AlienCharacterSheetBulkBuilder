@@ -14,5 +14,6 @@
         <Button Click="Button_json_Click">JSONStuff</Button>
         <Button Click="Button_Click_CreateSingleChar">Create single Charakter</Button>
         <Button Click="Button_Click_pdfTest">PDF Test</Button>
+        <Button Click="Button_Click_loadPlatoon">Load Platoon</Button>
     </StackPanel>
 </Window>
