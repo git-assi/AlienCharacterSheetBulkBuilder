@@ -11,7 +11,10 @@ namespace AlienCharBuilderLogic.Factory
         public static TinyItemsFactory TinyItems { get; } = new TinyItemsFactory();
         
         public static GenericTalentFactory GenericTalents { get; } = new GenericTalentFactory();
+
         
+        
+
 
     }
 }

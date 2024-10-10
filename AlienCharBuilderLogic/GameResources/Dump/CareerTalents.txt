@@ -1,0 +1,68 @@
+Marine: HARTE SCHALE: Du bist zwar abgebrüht, aber
+besitzt auch ein sensibles Gespür für die Anspannung
+im Team. Zwischen Kämpfen lockerst du die Stimmung
+mit derben Sprüchen und kameradschaftlichen
+Ellbogenstößen. Sowohl dein STRESSLEVEL als auch
+das aller Charaktere in KURZER Entfernung zu dir
+sinkt um 2 (statt um 1) pro Phase, die ihr rastend an
+einem sicheren Ort verbringt (siehe Seite 104). Bei
+mehreren Marines in der Gruppe verstärkt sich der
+Effekt nicht.#
+Marine: OVERKILL: Im Angesicht des Todes pulsiert statt
+Furcht nur blanker Zorn durch deine Adern. Du läufst
+nicht weg und versteckst dich nicht, sondern wirfst
+dich mit rasender Wut jedem Feind entgegen. Beim
+Ablegen eines Panikwurfs kannst du den Overkill-
+Effekt einsetzen (siehe Seite 104).#
+Marine: ÜBER DAS LIMIT: Wenn es hart auf hart
+kommt, blühen Marines erst richtig auf. Und du bist
+der zäheste Ledernacken weit und breit. Du kannst
+jeden Fertigkeitswurf, der auf STÄRKE basiert, zweimal
+strapazieren (statt einmal). Jedes Strapazieren
+erhöht dein STRESSLEVEL um 1.#
+Medic: BERUHIGENDE PRÄSENZ: Menschen entspannen
+sich unwillkürlich in deiner Nähe. Einmal pro
+Phase darfst du den STRESSLEVEL eines Charakters,
+der sich in KURZER Entfernung zu dir befindet, um 1
+senken. Das ist zusätzlich zur normalen Erholung von
+Stress möglich (siehe Seite 104). Um dieses Talent
+nutzen zu können, musst du dich mit der Zielperson
+an einem einigermaßen sicheren Ort befinden. Du
+kannst das Talent nicht auf dich selbst anwenden.#
+Medic: FELDARZT: Du bist damit vertraut, selbst
+schwerste Verletzungen zu behandeln. Du erhältst
+einen Modifikator von +2 auf MEDIZINISCHE HILFE,
+wenn du versuchst, jemandem nach einer tödlichen
+kritischen Verletzung das Leben zu retten (siehe
+Seite 99).#
+Medic: MITGEFÜHL: Dein Beruf ist für dich mehr als
+nur ein Job. Du sorgst dich wahrhaftig um die Menschen,
+die unter deiner Obhut stehen. Du kannst jeden
+Fertigkeitswurf, der auf EMPATHIE basiert, zweimal
+strapazieren (statt einmal). Jedes Strapazieren erhöht
+deinen STRESSLEVEL um 1.#
+Officer: EINBERUFEN: Du kannst die Fertigkeit BEFEHLIGEN
+verwenden, um anderen SC oder NSC klare
+Befehle zu erteilen. Deine Zielpersonen dürfen keine Offiziere
+sein und müssen zur gleichen Organisation oder
+Gruppierung gehören wie du. Um jemanden zu zwingen,
+deinen Befehlen Folge zu leisten und eine bestimmte
+Handlung auszuführen, legst du einen vergleichenden
+Wurf auf BEFEHLIGEN gegen MANIPULATION des Ziels
+ab. Bist du erfolgreich, muss die Person deinen Befehl
+befolgen, selbst wenn sie sich dadurch einer Gefahr aussetzt.
+Jede Anwendung dieses Talents erhöht deinen
+STRESSLEVEL um 1. Beachte, dass jeder Wurf nur eine
+einzige, bestimmte Handlung abdeckt und du Handlungen,
+die durch Panikwürfe hervorgerufen wurden,
+nicht unterbrechen kannst.#
+Officer: EINFLUSS : Mit einem bestimmten Rang erhält
+man gewisse Privilegien – dass man dir gehorcht, ist
+eines davon. Du kannst jeden Fertigkeitswurf, der auf
+EMPATHIE basiert, zweimal strapazieren (statt einmal).
+Jedes Strapazieren erhöht deinen STRESSLEVEL um 1.#
+Officer: FELDKOMMANDEUR: Verwendest du BEFEHLIGEN
+im Kampf, um Kommandos zu geben (siehe
+Seite 71), zählt dies als schnelle Aktion (statt als langsame).
+Das bedeutet, dass du zwei Befehle in einer
+Runde geben kannst.#

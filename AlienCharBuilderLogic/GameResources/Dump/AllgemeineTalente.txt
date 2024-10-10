@@ -71,9 +71,7 @@ Charakters zu reduzieren, der sich in KURZER Entfernung
 zu dir befindet. Für jedes sinkt der STRESSLEVEL um 1
 (zusätzlich zur normalen Erholung von Stress). Du kannst
 dieses Talent nicht auf dich selbst anwenden.#
-MG-SCHÜTZE: Deiner Meinung nach gibt es nur
-eine Methode, um mit jeder Art von Bedrohung umzugehen:
-Dauerfeuer, bis sich nichts mehr bewegt. Wenn
+MG-SCHÜTZE: Dauerfeuer, bis sich nichts mehr bewegt. Wenn
 du einen vollautomatischen Feuerstoß abgibst, wird dein
 STRESSLEVEL nicht erhöht.#
 NERVEN AUS STAHL: Gleichgültig, wie aussichtslos
@@ -123,8 +121,7 @@ einen Modifikator von +2 auf WAHRNEHMUNG, um einen
 Überraschungsangriff zu bemerken.#
 WAFFENSPEZIALISIERUNG: Mit dieser Art
 Waffe kämpfst du schon so lange, dass du sie blind beherrschst.
-Suche dir ein Waffenmodell aus den Listen in
-Kapitel 6 aus. Bei ihrer Verwendung erhältst du einen
+Suche dir ein Waffenmodell aus. Bei ihrer Verwendung erhältst du einen
 Modifikator von +2. Du kannst das Talent mehrfach
 wählen, bestimme dann jedes Mal ein neues Waffenmodell.
 Du kannst dich auch auf unbewaffnete Angriffe

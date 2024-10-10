@@ -21,10 +21,7 @@ namespace TestUI
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
-                var dsf = new foobar();
-                dsf.sfd();
-                return;
+            {               
                 var pf = new PlatoonFactory();
                 var plt = pf.CreatePlatoon();
                 pf.SavePlatoon(plt);
