@@ -99,6 +99,18 @@ namespace AlienCharBuilderLogic.Factory
                 }
 
                 },
+                {
+                    Constants.Weapon.TYPE.SHOTGUN ,
+                    new List<Weapon>()
+                {
+                    new Weapon() {Name = "D-57 Medved", Bonus = "+2", Damage = 3, Range = Constants.Weapon.REICHWEITE.KURZ, Weight = 1, Special = {Constants.Weapon.SPEZIAL.DOUBLE_SHOT} },
+                    new Weapon() {Name = "M37A3 Pumpgun", Bonus = "+2", Damage = 3, Range = Constants.Weapon.REICHWEITE.KURZ, Weight = 1, Special = {Constants.Weapon.SPEZIAL.DOPPELTE_PANZERUNG} },
+                    new Weapon() {Name = "Kramer Shortbarrel", Bonus = "+1", Damage = 3, Range = Constants.Weapon.REICHWEITE.KURZ, Weight = 1, Special = {Constants.Weapon.SPEZIAL.QUAD_SHOT } },
+                    new Weapon() {Name = "Type 21 Tactical Shotgun", Bonus = "+2", Damage = 3, Range = Constants.Weapon.REICHWEITE.MITTEL, Weight = 1, Special = {Constants.Weapon.SPEZIAL.DOPPELTE_PANZERUNG, Constants.Weapon.SPEZIAL.PIEZOELECTRIC } },
+                    new Weapon() {Name = "Heirloom Shotgun", Bonus = "+2", Damage = 3, Range = Constants.Weapon.REICHWEITE.KURZ, Weight = 1, Special = {Constants.Weapon.SPEZIAL.DOPPELTE_PANZERUNG} },
+                }
+
+                }
             };
         }
 

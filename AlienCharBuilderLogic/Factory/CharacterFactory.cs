@@ -68,7 +68,7 @@ namespace AlienCharBuilderLogic.Factory
             newCharacter.Attributes.Empathy.MedicalAid = randoIntSkill(caf.MedicalAid);
             newCharacter.Attributes.Empathy.Command = randoIntSkill(caf.Command);
 
-            newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
+            /*newCharacter.Weapons.AddRange(newCharacter.Career.DefaultWeapons);
 
             newCharacter.Armor = FactoryFloor.Armours.GetRandomArmor(RandomGen.Next(10));
             newCharacter.Talent = FactoryFloor.GenericTalents.GetRandomGenericTalent();
@@ -76,7 +76,7 @@ namespace AlienCharBuilderLogic.Factory
 
             Debug.WriteLine($"");
             newCharacter.TinyItems = FactoryFloor.TinyItems.CreateRandomTinyItems();
-
+            */
             newCharacter.Conditions.Encumbrance = ReadObjectWeight(newCharacter).ToString("F2");
 
 

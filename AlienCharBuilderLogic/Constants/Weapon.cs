@@ -7,6 +7,7 @@
         public class TYPE
         {
             public const string RIFLE = "Rifle";
+            public const string SHOTGUN = "Shotgun";
             public const string HANDGUN = "Handgun";
             public const string HEAVY_WEAPON = "Heavy Weapon";
             public const string EXTREM = "extrem";
@@ -32,6 +33,10 @@
             public const string FEUERINTENSITÄT_9 = "Feuerintensität 9";
             public const string ANDERE_GRANATEN = "kann andere Granatentypen abfeuern";
             public const string EXPLOSION = "Explosion";
+            public const string DOUBLE_SHOT = "Double Shot";
+            public const string QUAD_SHOT = "Quad Shot";
+            public const string PIEZOELECTRIC = "Piezoelectric";
+            
         }
     }
     
